@@ -1,0 +1,21 @@
+{{- $link := .Destination -}}
+{{- $text := .Text | safeHTML -}}
+{{- $localizedLink := $link | relLangURL -}}
+
+{{- $u := urls.Parse $link -}}
+{{- if $u.Scheme -}}
+    <a href="{{ $link }}"{{ with .Title }} title="{{ . }}"{{ end }} target="_blank">{{ $text }}&puncsp;<sup><small><i class="fa fa-external-link-alt"></i></small></sup></a>
+{{- else -}}
+    {{- if (eq $localizedLink $link) -}}
+        <a href="{{ $link }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ $text }}</a>
+    {{- else -}}
+        {{- $page := site.GetPage $link -}}
+        {{- $translatedPage := where $page.AllTranslations "Lang" site.Language.Lang -}}
+
+        {{- if $translatedPage -}}
+            <a href="{{ $localizedLink }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ $text }}</a>
+        {{- else -}}
+            <a href="{{ $link }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ $text }}</a>
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
