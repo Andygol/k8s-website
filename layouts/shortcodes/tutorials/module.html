@@ -1,0 +1,8 @@
+{{ $path := .Get "path" }}
+{{ $url := printf "/%s%s" .Page.Lang $path }}
+<div class="module">
+    <a href="{{ $url }}">
+        <img src="{{ .Get "image" }}" alt="{{ .Get "alt" }}">
+        <h5>{{ .Get "title" }}</h5>
+    </a>
+</div>
