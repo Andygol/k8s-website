@@ -232,7 +232,7 @@ desiredReplicas = ceil\left\lceil currentReplicas \times \frac{currentMetricValu
 -->
 ```math
 \begin{equation*}
-期望副本数 = ceil\left\lceil 当前副本数 \times \frac{当前指标}{期望指标} \right\rceil
+\text{期望副本数} = ceil\left\lceil \text{当前副本数} \times \frac{\text{当前指标}}{\text{期望指标}} \right\rceil
 \end{equation*}
 ```
 
