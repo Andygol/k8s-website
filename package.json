@@ -2,13 +2,16 @@
   "name": "kubernetes.io",
   "private": true,
   "scripts": {
-    "update:pkgs": "npx npm-check-updates -u"
+    "update:pkgs": "npx npm-check-updates -u",
+    "serve": "hugo server --buildDrafts --buildFuture --environment development",
+    "serve:netlify": "netlify dev --targetPort 1313"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
-    "docsy": "github:google/docsy#semver:0.11.0",
-    "postcss-cli": "^11.0.0",
-    "rtlcss": "^4.3.0"
+    "docsy": "github:google/docsy#v0.13.0",
+    "hugo-extended": "^0.151.2",
+    "netlify-cli": "^23.15.1",
+    "postcss-cli": "^11.0.0"
   },
   "spelling": "cSpell:ignore docsy pkgs -"
 }
