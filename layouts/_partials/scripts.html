@@ -33,11 +33,14 @@
 {{ else if .Site.Params.customSearch }}
 {{ $jsSearch = resources.Get "js/custom-search.js" }}
 {{ end }}
-{{ $jsArray := slice $jsBs $jsBase $jsNav $jsSearch -}}
-{{ if .Site.Params.ui.showLightDarkModeMenu -}}
-  {{ $jsArray = $jsArray | append (resources.Get "js/dark-mode.js") -}}
-{{ end -}}
-{{ $js := $jsArray | resources.Concat "js/main.js" -}}
+{{/* Build non-nil resource list using conditional with blocks to avoid nils in the slice */}}
+{{ $jsResources := slice }}
+{{ with $jsBs }}{{ $jsResources = $jsResources | append . }}{{ end }}
+{{ with $jsBase }}{{ $jsResources = $jsResources | append . }}{{ end }}
+{{ with $jsAnchor }}{{ $jsResources = $jsResources | append . }}{{ end }}
+{{ with $jsNav }}{{ $jsResources = $jsResources | append . }}{{ end }}
+{{ with $jsSearch }}{{ $jsResources = $jsResources | append . }}{{ end }}
+{{ $js := $jsResources | resources.Concat "js/main.js" -}}
 {{ if hugo.IsProduction -}}
   {{ $js := $js | minify | fingerprint -}}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>

@@ -1,0 +1,6 @@
+{{- $id := .id -}}
+{{- $class := .class -}}
+{{- $inner := .inner -}}
+<section id="{{ $id }}"{{ with $class }} class="{{ . }}"{{ end }}>
+  {{ $inner }}
+</section>
