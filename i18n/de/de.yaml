@@ -1,0 +1,145 @@
+# i18n strings for the German (main) site.
+
+docs_version_current: (dieser Dokumentation)
+
+docs_version_latest_heading: Aktuelle Version
+
+docs_version_other_heading: Vorherige Versionen
+
+deprecation_warning: " Die Dokumentation wird nicht mehr aktiv gepflegt. Die aktuell angezeigte Version ist eine statische Momentaufnahme. Aktuelle Dokumentation finden Sie unter "
+
+deprecation_file_warning: Veraltet
+
+objectives_heading: Ziele
+
+cleanup_heading: Aufräumen
+
+prerequisites_heading: Bevor Sie beginnen
+
+subscribe_button: Abonnieren
+
+whatsnext_heading: Nächste Schritte
+
+feedback_heading: Feedback
+
+feedback_question: "War diese Seite hilfreich?"
+
+feedback_yes: Ja
+
+feedback_no: Nein
+
+latest_version: aktuelle Version.
+
+version_check_mustbe: "Ihr Kubernetes-Server benötigt die Version "
+
+version_check_mustbeorlater: "Ihr Kubernetes-Server benötigt mindestens die Version  "
+
+version_check_tocheck: "Um die Version zu überprüfen, geben Sie Folgendes ein "
+
+caution: "Achtung:"
+
+note: "Hinweis:"
+
+warning: "Warnung:"
+
+main_read_about: Mehr Informationen
+
+main_read_more: Weiterlesen
+
+main_github_invite: "Interested in hacking on the core Kubernetes code base?"
+
+main_github_view_on: Auf GitHub ansehen
+
+main_github_create_an_issue: Problem berichten
+
+main_community_explore: Entdecke die Community
+
+main_kubernetes_features: Kubernetes Features
+
+main_cncf_project: "Wir sind ein <a href=\"https://cncf.io/\">CNCF</a> Abschlussprojekt</p>"
+
+main_kubeweekly_baseline: "Möchtest du die neuesten Nachrichten von Kubernetes erhalten? Melde dich für KubeWeekly an."
+
+main_kubeweekly_past_link: Frühere Newsletter anzeigen
+
+main_kubeweekly_signup: Abonnieren
+
+main_contribute: Contribute
+
+main_edit_this_page: Diese Seite bearbeiten
+
+main_page_history: Seitenverlauf
+
+main_page_last_modified_on: Letzte Änderung am
+
+main_by: durch
+
+main_documentation_license: "The Kubernetes Authors | Documentation Distributed under <a href=\"https://git.k8s.io/website/LICENSE\" class=\"light-text\">CC BY 4.0</a>"
+
+main_copyright_notice: "The Linux Foundation &reg;. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=\"https://www.linuxfoundation.org/trademark-usage\" class=\"light-text\">Trademark Usage page</a>"
+
+# Labels for the docs portal home page.
+docs_label_browse: Dokumention durchsuchen
+
+docs_label_contributors: Mitwirkende
+
+docs_label_users: Users
+
+docs_label_i_am: ICH BIN...
+
+# layouts > blog > pager
+layouts_blog_pager_prev: "<< Zurück"
+
+layouts_blog_pager_next: "Vor >>"
+
+# layouts > blog > list
+layouts_case_studies_list_tell: Erzählen Sie Ihre Geschichte
+
+# layouts > docs > glossary
+layouts_docs_glossary_description: "Dieses Glossar soll eine umfassende, standardisierte Liste der Kubernetes-Terminologie darstellen. Es enthält technische Begriffe, die für K8 spezifisch sind, sowie allgemeinere Begriffe, die einen nützlichen Kontext bieten."
+
+layouts_docs_glossary_filter: Begriffe nach ihren Tags filtern
+
+layouts_docs_glossary_select_all: Alle auswählen
+
+layouts_docs_glossary_deselect_all: Alle abwählen
+
+layouts_docs_glossary_aka: Auch bekannt als
+
+layouts_docs_glossary_click_details_before: Klicken Sie auf die
+
+layouts_docs_glossary_click_details_after: "Indikatoren unten, um eine längere Erklärung für einen bestimmten Begriff zu erhalten."
+
+# layouts > docs > search
+layouts_docs_search_fetching: Ergebnisse werden abgerufen...
+
+# layouts > partial > feedback
+layouts_docs_partials_feedback_thanks: "Danke für die Rückmeldung. Wenn Sie eine spezifische, beantwortbare Frage zur Verwendung von Kubernetes haben, stellen Sie diese unter "
+
+layouts_docs_partials_feedback_issue: "Öffnen Sie ein Problem im GitHub-Repo, wenn Sie möchten "
+
+layouts_docs_partials_feedback_problem: Ein Problem melden
+
+layouts_docs_partials_feedback_or: oder
+
+layouts_docs_partials_feedback_improvement: Eine Verbesserung vorschlagen
+
+# Community links
+community_twitter_name: Twitter
+
+community_github_name: GitHub
+
+community_linkedin_name: LinkedIn
+
+community_slack_name: Slack
+
+community_stack_overflow_name: Stack Overflow
+
+community_forum_name: Forum
+
+community_events_calendar: Veranstaltungskalender
+
+# UI elements
+ui_search: Suchen
+
+input_placeholder_email_address: "E-Mail-Adresse"

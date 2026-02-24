@@ -1,0 +1,428 @@
+# i18n strings for the Russian (main) site.
+# NOTE: Please keep the entries in alphabetical order when editing
+
+# For "and", see [conjunction_1]
+
+api_reference_title: Справка API
+
+auto_generated_edit_notice: (автоматически сгенерированная страница)
+
+auto_generated_pageinfo: "<p>Эта страница сгенерирована автоматически.</p><p>Если вы планируете сообщить о проблеме на этой странице, в описании своего issue укажите, что она автоматически сгенерирована. Возможно, исправление потребуется сделать в других репозиториях проекта Kubernetes.</p>"
+
+banner_acknowledgement: Скрыть это уведомление
+
+blog_post_show_more: Показать больше публикаций...
+
+case_study_prefix: "Кейс:"
+
+caution: "Внимание:"
+
+cleanup_heading: Очистка
+
+# Localization note (no need to translate this note)
+# This is always followed by Chinese text, as required by the Kubernetes
+# project's ICP license, issued by the government of the People's Republic
+# of China.
+china_icp_license: "ICP license:"
+
+community_events_calendar: Календарь событий
+
+community_forum_name: Форум
+
+community_github_name: GitHub
+
+community_linkedin_name: LinkedIn
+
+community_server_fault_name: Server Fault
+
+community_slack_name: Slack
+
+community_stack_overflow_name: Stack Overflow
+
+community_twitter_name: X (ранее Twitter)
+
+community_x_name: X (ранее Twitter)
+
+community_youtube_name: YouTube
+
+# Avoid using conjunction_1.
+# Must match the context in layouts/shortcodes/release-data.html
+# Appears on https://kubernetes.io/releases/
+# For example the "and" in "Complete 1.25 Schedule and Changelog"
+conjunction_1: и
+
+cve_id: CVE ID
+
+cve_issue_url: CVE GitHub Issue URL
+
+cve_summary: Описание проблемы
+
+cve_table: Официальный список Kubernetes CVE
+
+cve_table_date_format: "02 Jan 2006 15:04:05 MST"
+
+cve_table_date_format_string: "(последнее обновление: %s)"
+
+deprecation_title: "Вы просматриваете документацию для Kubernetes версии:"
+
+deprecation_warning: " документация больше не поддерживается. Версия, которую вы сейчас просматриваете, является статической. Для актуальной документации см. "
+
+deprecation_file_warning: Устаревшая
+
+outdated_content_title: Информация этой страницы может быть устаревшей
+
+outdated_content_message: "Оригинальная (английская) версия этого документа обновлялась с момента последнего перевода, поэтому информация может быть устаревшей. Если вы читаете на английском, посмотрите на оригинальную версию с наиболее актуальной информацией: "
+
+dockershim_message: "Dockershim удалён из проекта Kubernetes в релизе 1.24. См. подробности в <a href=\"/dockershim\">Dockershim Removal FAQ</a>."
+
+docs_label_browse: Просмотр документации
+
+docs_label_contributors: Участники сообщества
+
+docs_label_i_am: Я ...
+
+docs_label_users: Пользователи
+
+docs_page_versions: "Это %s для Kubernetes %s. Если вам нужна другая версия Kubernetes, используйте следующие страницы:"
+
+docs_version_current: (эта документация)
+
+docs_version_latest_heading: Последняя версия
+
+docs_version_other_heading: Предыдущие версии
+
+end_of_life: "Конец жизни:"
+
+envvars_heading: Переменные окружения
+
+error_404_were_you_looking_for: "Возможно, вы искали:"
+
+examples_heading: Примеры
+
+feature_gate_stage_alpha: Alpha
+
+feature_gate_stage_beta: Beta
+
+feature_gate_stage_stable: GA
+
+feature_gate_stage_deprecated: Deprecated
+
+feature_gate_table_header_default: По умолчанию
+
+feature_gate_table_header_feature: Фича
+
+feature_gate_table_header_from: С
+
+feature_gate_table_header_since: Начиная с
+
+feature_gate_table_header_stage: Статус
+
+feature_gate_table_header_to: До
+
+feature_gate_table_header_until: До
+
+feature_state: "СТАТУС ФИЧИ:"
+
+feature_state_kubernetes_label: Kubernetes
+
+feature_state_feature_gate_tooltip: "Feature Gate:"
+
+feedback_heading: Обратная связь
+
+feedback_no: Нет
+
+feedback_question: "Эта страница была полезна?"
+
+feedback_yes: Да
+
+final_patch_release: "Последний патч-релиз"
+
+inline_list_separator: ","
+
+input_placeholder_email_address: адрес электронной почты
+
+javascript_required: "Для просмотра этого содержимого необходимо [включить](https://www.enable-javascript.com/) JavaScript"
+
+katacoda_message: |-
+  <h4>Отключение интерактивных руководств</h4>
+  <p>Интерактивные руководства на этом сайте перестали функционировать. Участники
+  проекта Kubernetes надеются, что в долгосрочной перспективе подобная интерактивная
+  возможность для обучения появится вновь.</p>
+  <p>Отключение стало следствием <a
+  href="https://www.oreilly.com/content/oreilly-acquires-katacoda-and-a-new-way-for-2-5m-customers-to-learn/">приобретения</a>
+  Katacoda компанией O'Reilly Media в 2019 году.</p>
+  <p>Сообщество Kubernetes благодарит O'Reilly и Katacoda за долгие годы помощи
+  пользователям, которые делали свои первые шаги в обучении Kubernetes.</p>
+  <p>Руководства перестали функционировать <b>31 марта 2023 года</b>. Больше
+  информации можно найти в публикации в блоге под названием
+  "<a href="/blog/2023/02/14/kubernetes-katacoda-tutorials-stop-from-2023-03-31/">Free Katacoda Kubernetes Tutorials Are Shutting Down</a>."</p>
+
+latest_release: "Последний релиз:"
+
+latest_version: последнюю версию.
+
+layouts_blog_pager_prev: "<< Назад"
+
+layouts_blog_pager_next: "Вперёд >>"
+
+layouts_case_studies_list_tell: Расскажите свою историю
+
+layouts_docs_glossary_aka: Также известный как
+
+layout_docs_glossary_architecture_description: Внутренние компоненты Kubernetes.
+
+layout_docs_glossary_architecture_name: Архитектура
+
+layouts_docs_glossary_click_details_after: "ниже, чтобы получить более подробное описание нужного термина."
+
+layouts_docs_glossary_click_details_before: Нажмите на значок
+
+layout_docs_glossary_community_description: "Относится к Open Source-разработке Kubernetes."
+
+layout_docs_glossary_community_name: Сообщество
+
+layout_docs_glossary_core-object_description: "Тип ресурса, поддерживаемый Kubernetes по умолчанию."
+
+layout_docs_glossary_core-object_name: Базовый объект
+
+layouts_docs_glossary_description: "Данный глоссарий должен стать исчерпывающим стандартизированным списком терминологии в Kubernetes. Он включает технические термины, специфичные для Kubernetes, а также более общие термины, которые полезно знать."
+
+layouts_docs_glossary_deselect_all: Отменить выбор всех тегов
+
+layout_docs_glossary_extension_description: Поддерживаемые кастомизации для Kubernetes.
+
+layout_docs_glossary_extension_name: Расширение
+
+layouts_docs_glossary_filter: Фильтрация терминов по тегам
+
+layout_docs_glossary_fundamental_description: Актуальное для совсем нового пользователя Kubernetes.
+
+layout_docs_glossary_fundamental_name: Фундаментальное
+
+layout_docs_glossary_networking_description: Как компоненты Kubernetes взаимодействуют между собой (и с программами вне кластера).
+
+layout_docs_glossary_networking_name: Сеть
+
+layout_docs_glossary_operation_description: Запуск и поддержка Kubernetes.
+
+layout_docs_glossary_operation_name: Эксплуатация
+
+layout_docs_glossary_security_description: Обеспечение безопасности для приложений в Kubernetes.
+
+layout_docs_glossary_security_name: Безопасность
+
+layouts_docs_glossary_select_all: Выбрать всё
+
+layout_docs_glossary_storage_description: Как приложения в Kubernetes хранят постоянные данные.
+
+layout_docs_glossary_storage_name: Хранилище
+
+layout_docs_glossary_tool_description: "Приложения, которые упрощают или улучшают работу с Kubernetes."
+
+layout_docs_glossary_tool_name: Инструменты
+
+layout_docs_glossary_user-type_description: Примеры типичных пользователей Kubernetes.
+
+layout_docs_glossary_user-type_name: Тип пользователей
+
+layout_docs_glossary_workload_description: "Приложения, которые запускаются в Kubernetes."
+
+layout_docs_glossary_workload_name: Рабочие нагрузки
+
+layouts_docs_partials_feedback_improvement: предложить улучшение
+
+layouts_docs_partials_feedback_issue: "Создайте issue в репозитории GitHub, если вы хотите "
+
+layouts_docs_partials_feedback_or: или
+
+layouts_docs_partials_feedback_problem: сообщить о проблеме
+
+layouts_docs_partials_feedback_thanks: "Спасибо за обратную связь! Если у вас есть конкретный вопрос об использовании Kubernetes, спросите на"
+
+layouts_docs_search_fetching: Получение результатов...
+
+legacy_repos_message: |-
+  Репозитории `apt.kubernetes.io` и `yum.kubernetes.io` с пакетами Kubernetes объявлены
+  [устаревшими и необновляемыми с 13 сентября 2023](/blog/2023/08/31/legacy-package-repository-deprecation/).
+  **Чтобы устанавливать релизы Kubernetes, выпущенные после 13 сентября 2023, строго необходимо
+  использовать [новые репозитории с пакетами `pkgs.k8s.io`](/blog/2023/08/15/pkgs-k8s-io-introduction/).**
+  Устаревшие legacy-репозитории и их содержимое могут быть удалены в любой момент и без предварительного
+  уведомления. В новых репозиториях можно найти версии Kubernetes начиная с v1.24.0.
+
+
+main_by: от
+
+main_cncf_project: "Мы являемся проектом <a href=\"https://cncf.io/\">CNCF</a></p>"
+
+main_community_explore: Познакомиться с сообществом
+
+main_contribute: Помочь проекту
+
+main_copyright_notice: "The Linux Foundation &reg;. Все права защищены. The Linux Foundation является зарегистрированной торговой маркой. Список торговых марок The Linux Foundation приведён на странице <a href=\"https://www.linuxfoundation.org/trademark-usage\" class=\"light-text\">использования торговых марок</a>"
+
+main_documentation_license: "Авторы Kubernetes | Документация распространяется под лицензией <a href=\"https://git.k8s.io/website/LICENSE\" class=\"light-text\">CC BY 4.0</a>"
+
+main_github_invite: "Хотите взломать ядро кодовой базы Kubernetes?"
+
+main_github_view_on: Посмотреть на GitHub
+
+main_kubernetes_features: Возможности Kubernetes
+
+main_kubeweekly_baseline: "Интересуетесь последними новостями Kubernetes? Подпишитесь на KubeWeekly."
+
+main_kubeweekly_past_link: Посмотреть последние новостные выпуски
+
+main_kubeweekly_signup: Подписаться
+
+main_page_history: История страницы
+
+main_page_last_modified_on: Последний раз страница редактировалась
+
+main_read_about: Прочитать о
+
+main_read_more: Узнать больше
+
+monthly_patch_release: "Ежемесячный патч-релиз"
+
+# Localization teams: it's OK to use a longer text here
+not_applicable: н/д
+
+note: "Примечание:"
+
+objectives_heading: Цели
+
+options_heading: Опции
+
+outdated_blog__message: "Это статье больше одного года. Такие статьи могут содержать устаревшую информацию. Перепроверяйте информацию на странице, поскольку она могла стать некорректной с момента её публикации."
+
+patch_release: "Патч-релиз"
+
+post_create_issue: Создать issue
+
+prerequisites_heading: Подготовка к работе
+
+previous_patches: "Патч-релизы:"
+
+# The following text is displayed when JavaScript isn't available.
+release_binary_alternate_links: |-
+  Ссылки для загрузки компонентов Kubernetes (и их контрольные суммы) можно найти в файлах [CHANGELOG](https://github.com/kubernetes/kubernetes/tree/master/CHANGELOG).
+  Кроме того, можно воспользоваться [downloadkubernetes.com](https://www.downloadkubernetes.com/) для фильтрации по версии и архитектуре.
+
+release_binary_arch: Архитектура
+
+release_binary_arch_option: Архитектуры
+
+release_binary_copy_link: Ссылка для копирования
+
+release_binary_copy_link_certifcate: сертификат
+
+release_binary_copy_link_checksum: checksum
+
+release_binary_copy_link_signature: подпись
+
+release_binary_copy_link_tooltip: скопировать в буфер обмена
+
+release_binary_download: Скачать бинарник
+
+release_binary_download_tooltip: скачать бинарный файл
+
+release_binary_options: Опции для загрузки
+
+release_binary_os: Операционная система
+
+release_binary_os_option: Операционные системы
+
+release_binary_os_darwin: darwin
+
+release_binary_os_linux: linux
+
+release_binary_os_windows: windows
+
+release_binary_table_caption: Скачать бинарники компонентов Kubernetes
+
+# NOTE: <current-version> is a placeholder for the actual version number set by 'release-binaries' shortcode.
+# Please do not localize or modify <current-version> placeholder.
+release_binary_section: |-
+  Ниже представлены ссылки для загрузки компонентов Kubernetes <current-version> (и их контрольные суммы).
+  Чтобы скачать более старые поддерживаемые версии, перейдите на соответствующую страницу документации
+  для [предыдущих версий](https://kubernetes.io/ru/docs/home/supported-doc-versions/#versions-older) или используйте [downloadkubernetes.com](https://www.downloadkubernetes.com/).
+
+# NOTE: <current-version> and <current-changelog-url> are placeholders set by 'release-binaries' shortcode.
+# Please do not localize or modify <current-version> and <current-changelog-url>  placeholders.
+release_binary_section_note: |-
+  Чтобы скачать более ранние патч-версии компонентов Kubernetes <current-version> (и их контрольные суммы),
+  смотрите файл [CHANGELOG](https://github.com/kubernetes/kubernetes/tree/master/CHANGELOG/CHANGELOG-<current-changelog-url>.md).
+
+release_binary_version: Версия
+
+release_binary_version_option: Последняя версия
+
+release_date_after: )
+
+release_date_before: "(дата релиза: "
+
+# See https://gohugo.io/functions/format/#gos-layout-string
+# Use a suitable format for your locale
+release_date_format: "2006-01-02"
+
+release_date_format_month: January 2006
+
+release_cherry_pick_deadline: Дедлайн для Cherry Pick
+
+release_end_of_life_date: Дата конца жизни (EOL)
+
+release_full_details_initial_text: Полная информация по релизу
+
+release_information_navbar: Информация о релизе
+
+release_minor_version: Минорная версия
+
+release_info_next_patch: "Следующий патч-релиз — **%s**."
+
+# Localization note: You can use Markdown here.
+# The three placeholders (in order) are:
+#   Kubernetes minor version
+#   maintenance mode date
+#   end of life date
+#
+# Keep this order. It is OK to use more than one sentence, and it's also OK to change the
+# tense of the text so long as the meaning is clear.
+release_info_eol: "**%s** переходит в режим поддержки (maintenance) **%s**, а конец жизни (EOL) — **%s**."
+
+release_note: Примечание
+
+release_schedule: "План патч-версий"
+
+release_target_date: Планируемая дата
+
+release_changelog: Changelog
+
+seealso_heading: См. также
+
+subscribe_button: Подписаться
+
+synopsis_heading: Краткое описание
+
+thirdparty_message: "Этот раздел ссылается на сторонние проекты, реализующие функциональность, которая требуется Kubernetes. Авторы Kubernetes не несут ответственность за проекты, представленные здесь в алфавитном порядке. Чтобы добавить проект к этому списку, ознакомьтесь с <a href=\"/docs/contribute/style/content-guide/#third-party-content\">руководством по контенту</a> перед публикацией изменений. <a href=\"#third-party-content-disclaimer\">Подробнее</a>."
+
+thirdparty_message_edit_disclaimer: "Рекомендация по стороннему контенту"
+
+thirdparty_message_single_item: "&#128711; Здесь дана ссылка на сторонний проект или продукт, который не является частью самого Kubernetes. <a class=\"alert-more-info\" href=\"#third-party-content-disclaimer\">Подробнее</a>"
+
+thirdparty_message_disclaimer: "<p>Объекты этой страницы ссылаются на сторонние продукты или проекты, реализующие функциональность, которая требуется Kubernetes. Авторы Kubernetes не несут ответственность за эти сторонние продукты или проекты. Подробнее читайте в <a href=\"https://github.com/cncf/foundation/blob/master/website-guidelines.md\" target=\"_blank\">инструкциях по сайту CNCF</a>.</p><p>Перед тем, как предлагать изменения, которые добавят новую стороннюю ссылку, необходимо прочитать <a href=\"/docs/contribute/style/content-guide/#third-party-content\">руководство по контенту</a>.</p>"
+
+thirdparty_message_vendor: "Объекты этой страницы ссылаются на внешних (по отношению к Kubernetes) поставщиков. Авторы проекта Kubernetes не несут ответственность за эти сторонние продукты и проекты. Чтобы добавить вендора, продукт или проект в этот список, ознакомьтесь с <a href=\"/docs/contribute/style/content-guide/#third-party-content\">руководством по контенту</a> перед тем, как предлагать изменение. <a href=\"#third-party-content-disclaimer\">Больше информации.</a>"
+
+ui_search: Поиск
+
+version_check_mustbe: "Ваш сервер Kubernetes должен быть версии "
+
+version_check_mustbeorlater: "Ваш сервер Kubernetes должен быть версии или позже, чем версия "
+
+version_check_tocheck: "Чтобы проверить версию, введите "
+
+version_menu: Версии
+
+warning: "Предупреждение:"
+
+whatsnext_heading: Что дальше
