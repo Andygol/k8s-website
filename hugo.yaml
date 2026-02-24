@@ -1,0 +1,512 @@
+baseURL: "https://kubernetes.io"
+title: "Kubernetes"
+theme:
+  - docsy
+themesDir: "node_modules"
+contentDir: "content/en"
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: false
+timeZone: "Etc/UTC"
+enableRobotsTXT: true
+disableBrowserError: true
+disableAliases: true
+disableKinds:
+  - taxonomy
+ignoreFiles:
+  - "(?:^|/)OWNERS$"
+  - "README[-]+[a-z]*\\.md"
+  - "^node_modules$"
+  - "content/en/docs/doc-contributor-tools"
+timeout: "180s"
+enableGitInfo: true
+
+caches:
+  assets:
+    dir: ":cacheDir/_gen"
+    maxAge: -1
+  getresource:
+    dir: ":cacheDir/:project"
+    maxAge: "60s"
+  images:
+    dir: ":cacheDir/_images"
+    maxAge: -1
+  modules:
+    dir: ":cacheDir/modules"
+    maxAge: -1
+
+markup:
+  goldmark:
+    extensions:
+      definitionList: true
+      table: true
+      typographer: false
+    parser:
+      attribute: true
+      autoHeadingID: true
+      autoHeadingIDType: "blackfriday"
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false
+    style: "emacs"
+    tabWidth: 4
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+
+frontmatter:
+  date:
+    - date
+    - ":filename"
+    - publishDate
+    - lastmod
+
+permalinks:
+  page:
+    blog: "/:section/:year/:month/:day/:slug/"
+
+sitemap:
+  filename: "sitemap.xml"
+  priority: 0.75
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - HEADERS
+    - REDIRECTS
+  page:
+    - HTML
+  section:
+    - HTML
+    - print
+
+mediaTypes:
+  "text/netlify":
+    delimiter: ""
+
+outputFormats:
+  RSS:
+    baseName: "feed"
+  HEADERS:
+    mediatype: "text/netlify"
+    baseName: "_headers"
+    isPlainText: true
+    notAlternative: true
+  REDIRECTS:
+    mediatype: "text/netlify"
+    baseName: "_redirects"
+    isPlainText: true
+    notAlternative: true
+
+imaging:
+  resampleFilter: "CatmullRom"
+  quality: 75
+  anchor: "Smart"
+
+services:
+  googleAnalytics:
+    id: "UA-00000000-0"
+
+params:
+  copyright_k8s: "The Kubernetes Authors"
+  copyright_linux: "Copyright © 2020 The Linux Foundation ®."
+  contribution_guidelines_url: "https://www.kubernetes.dev/docs/contributor-cheatsheet/"
+  time_format_blog: "Monday, January 02, 2006"
+  time_format_default: "January 02, 2006 at 3:04 PM PST"
+  description: "Production-Grade Container Orchestration"
+  showedit: true
+
+  latest: "v1.37"
+  version: "v1.37"
+  githubbranch: "main"
+  docsbranch: "main"
+  deprecated: false
+  url_latest_version: "https://kubernetes.io/docs/home/"
+  nextUrl: "https://kubernetes-io-vnext-staging.netlify.com/"
+  githubWebsiteRaw: "raw.githubusercontent.com/kubernetes/website"
+  github_repo: "https://github.com/kubernetes/website"
+  customSearch: true
+  algolia_docsearch: false
+  offlineSearch: false
+  cveFeedBucket: "https://storage.googleapis.com/k8s-cve-feed/official-cve-feed.json"
+  pushAssets:
+    css:
+      - callouts
+      - styles
+    js:
+      - script
+
+  versions:
+    - version: "v1.37"
+      githubbranch: "v1.37.0"
+      docsbranch: "main"
+      url: "https://kubernetes.io"
+    - version: "v1.36"
+      githubbranch: "v1.36.0"
+      docsbranch: "release-1.36"
+      url: "https://v1-36.docs.kubernetes.io"
+    - version: "v1.35"
+      githubbranch: "v1.35.3"
+      docsbranch: "main"
+      url: "https://v1-35.docs.kubernetes.io"
+    - version: "v1.34"
+      githubbranch: "v1.34.6"
+      docsbranch: "release-1.34"
+      url: "https://v1-34.docs.kubernetes.io"
+    - version: "v1.33"
+      githubbranch: "v1.33.10"
+      docsbranch: "release-1.33"
+      url: "https://v1-33.docs.kubernetes.io"
+
+  ui:
+    sidebar_resizable: false
+    sidebar_menu_compact: false
+    ul_show: 3
+    sidebar_menu_foldable: true
+    sidebar_cache_limit: 1
+    breadcrumb_disable: false
+    sidebar_search_disable: false
+    navbar_logo: true
+    footer_about_enable: true
+    showLightDarkModeMenu: true
+    feedback:
+      enable: true
+      "yes": 'Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
+      "no": 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
+  links:
+    user:
+      - name_key: "community_youtube_name"
+        url: "https://youtube.com/kubernetescommunity"
+        icon: "fa-brands fa-youtube"
+      - name_key: "community_forum_name"
+        url: "https://discuss.kubernetes.io"
+        icon: "fa-solid fa-envelope"
+      - name_key: "community_server_fault_name"
+        url: "https://serverfault.com/questions/tagged/kubernetes"
+        icon: "fa-brands fa-stack-overflow"
+      - name_key: "community_linkedin_name"
+        url: "https://www.linkedin.com/company/kubernetes/"
+        icon: "fa-brands fa-linkedin"
+      - name_key: "community_bluesky_name"
+        url: "https://bsky.app/profile/kubernetes.io"
+        icon: "fa-brands fa-bluesky"
+      - name_key: "community_x_name"
+        url: "https://x.com/kubernetesio"
+        icon: "fa-brands fa-x-twitter"
+    developer:
+      - name_key: "community_contributor_site_name"
+        url: "https://k8s.dev/"
+        icon: "fa-solid fa-laptop-code"
+      - name_key: "community_github_name"
+        url: "https://github.com/kubernetes/kubernetes"
+        icon: "fa-brands fa-github"
+      - name_key: "community_slack_name"
+        url: "https://slack.k8s.io"
+        icon: "fa-brands fa-slack"
+      - name_key: "community_calendar_name"
+        url: "https://calendar.google.com/calendar/embed?src=calendar%40kubernetes.io"
+        icon: "fa-solid fa-calendar-days"
+
+languages:
+  en:
+    title: "Kubernetes"
+    languageName: "English"
+    weight: 1
+    languageDirection: "ltr"
+    params:
+      description: "Production-Grade Container Orchestration"
+  bn:
+    title: "Kubernetes"
+    languageName: "বাংলা (Bengali)"
+    weight: 2
+    contentDir: "content/bn"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "02.01.2006"
+      language_alternatives:
+        - en
+      description: "প্রোডাকশন-গ্রেড কন্টেইনার অর্কেস্ট্রেশন"
+      languageNameLatinScript: "Bengali"
+  zh-cn:
+    title: "Kubernetes"
+    languageName: "中文 (Chinese)"
+    weight: 3
+    contentDir: "content/zh-cn"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "2006.01.02"
+      language_alternatives:
+        - en
+      languageNameLatinScript: "Chinese"
+      description: "生产级别的容器编排系统"
+  fr:
+    title: "Kubernetes"
+    languageName: "Français (French)"
+    weight: 4
+    contentDir: "content/fr"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "02.01.2006"
+      language_alternatives:
+        - en
+      description: "Solution professionnelle d'orchestration de conteneurs"
+      languageNameLatinScript: "Français"
+  de:
+    title: "Kubernetes"
+    languageName: "Deutsch (German)"
+    weight: 5
+    contentDir: "content/de"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "02.01.2006"
+      language_alternatives:
+        - en
+      description: "Produktionsreife Container-Orchestrierung"
+      languageNameLatinScript: "Deutsch"
+  hi:
+    title: "Kubernetes"
+    languageName: "हिन्दी (Hindi)"
+    weight: 6
+    contentDir: "content/hi"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "02.01.2006"
+      language_alternatives:
+        - en
+      description: "प्रोडक्शन-ग्रेड कंटेनर ऑर्केस्ट्रेशन"
+      languageNameLatinScript: "Hindi"
+  id:
+    title: "Kubernetes"
+    languageName: "Bahasa Indonesia (Indonesian)"
+    weight: 7
+    contentDir: "content/id"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "02.01.2006"
+      language_alternatives:
+        - en
+      description: "Orkestrasi Kontainer dengan Skala Produksi"
+      languageNameLatinScript: "Bahasa Indonesia"
+  it:
+    title: "Kubernetes"
+    languageName: "Italiano (Italian)"
+    weight: 8
+    contentDir: "content/it"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "02.01.2006"
+      language_alternatives:
+        - en
+      description: "Orchestrazione di Container in produzione"
+      languageNameLatinScript: "Italiano"
+  ja:
+    title: "Kubernetes"
+    languageName: "日本語 (Japanese)"
+    weight: 9
+    contentDir: "content/ja"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "2006.01.02"
+      language_alternatives:
+        - en
+      languageNameLatinScript: "Japanese"
+      description: "プロダクショングレードのコンテナ管理基盤"
+  ko:
+    title: "Kubernetes"
+    languageName: "한국어 (Korean)"
+    weight: 10
+    contentDir: "content/ko"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "2006.01.02"
+      language_alternatives:
+        - en
+      description: "운영 수준의 컨테이너 오케스트레이션"
+      languageNameLatinScript: "Korean"
+  fa:
+    title: "Kubernetes"
+    languageName: "فارسی (Persian)"
+    weight: 11
+    contentDir: "content/fa"
+    languageDirection: "rtl"
+    params:
+      time_format_blog: "2006.01.02"
+      language_alternatives:
+        - en
+      description: "کوبرنتیز، مدیریت کانتینر در سطح عملیاتی"
+      languageNameLatinScript: "Persian"
+  pl:
+    title: "Kubernetes"
+    languageName: "Polski (Polish)"
+    weight: 12
+    contentDir: "content/pl"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "01.02.2006"
+      language_alternatives:
+        - en
+      description: "Produkcyjny system zarządzania kontenerami"
+      languageNameLatinScript: "Polski"
+  pt-br:
+    title: "Kubernetes"
+    languageName: "Português (Portuguese)"
+    weight: 13
+    contentDir: "content/pt-br"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "02.01.2006"
+      language_alternatives:
+        - en
+      description: "Orquestração de contêineres em nível de produção"
+      languageNameLatinScript: "Português"
+  ru:
+    title: "Kubernetes"
+    languageName: "Русский (Russian)"
+    weight: 14
+    contentDir: "content/ru"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "02.01.2006"
+      language_alternatives:
+        - en
+      description: "Первоклассная оркестрация контейнеров"
+      languageNameLatinScript: "Russian"
+  es:
+    title: "Kubernetes"
+    languageName: "Español (Spanish)"
+    weight: 15
+    contentDir: "content/es"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "02.01.2006"
+      language_alternatives:
+        - en
+      description: "Orquestación de contenedores para producción"
+      languageNameLatinScript: "Español"
+  uk:
+    title: "Kubernetes"
+    languageName: "Українська (Ukrainian)"
+    weight: 16
+    contentDir: "content/uk"
+    languageDirection: "ltr"
+    params:
+      time_format_blog: "02.01.2006"
+      language_alternatives:
+        - en
+      description: "Довершена система оркестрування контейнерів"
+      languageNameLatinScript: "Ukrainian"
+  vi:
+    title: "Kubernetes"
+    languageName: "Tiếng Việt (Vietnamese)"
+    weight: 17
+    contentDir: "content/vi"
+    languageDirection: "ltr"
+    params:
+      languageNameLatinScript: "Tiếng Việt"
+      description: "Giải pháp điều phối container trong môi trường production"
+      language_alternatives:
+        - en
+
+module:
+  replacements: "github.com/twbs/bootstrap -> bootstrap, github.com/FortAwesome/Font-Awesome -> @fortawesome/fontawesome-free"
+  hugoVersion:
+    min: "0.155.3"
+  mounts:
+    - source: "i18n/bn"
+      target: "i18n"
+    - source: "i18n/de"
+      target: "i18n"
+    - source: "i18n/en"
+      target: "i18n"
+    - source: "i18n/es"
+      target: "i18n"
+    - source: "i18n/fr"
+      target: "i18n"
+    - source: "i18n/hi"
+      target: "i18n"
+    - source: "i18n/id"
+      target: "i18n"
+    - source: "i18n/it"
+      target: "i18n"
+    - source: "i18n/ja"
+      target: "i18n"
+    - source: "i18n/ko"
+      target: "i18n"
+    - source: "i18n/fa"
+      target: "i18n"
+    - source: "i18n/pl"
+      target: "i18n"
+    - source: "i18n/pt-br"
+      target: "i18n"
+    - source: "i18n/ru"
+      target: "i18n"
+    - source: "i18n/uk"
+      target: "i18n"
+    - source: "i18n/vi"
+      target: "i18n"
+    - source: "i18n/zh-cn"
+      target: "i18n"
+
+segments:
+  all:
+    includes:
+      - path: "{/**}"
+  en:
+    includes:
+      - lang: "en"
+  bn:
+    includes:
+      - lang: "bn"
+  zh-cn:
+    includes:
+      - lang: "zh-cn"
+  fr:
+    includes:
+      - lang: "fr"
+  de:
+    includes:
+      - lang: "de"
+  hi:
+    includes:
+      - lang: "hi"
+  id:
+    includes:
+      - lang: "id"
+  it:
+    includes:
+      - lang: "it"
+  ja:
+    includes:
+      - lang: "ja"
+  ko:
+    includes:
+      - lang: "ko"
+  fa:
+    includes:
+      - lang: "fa"
+  pl:
+    includes:
+      - lang: "pl"
+  pt-br:
+    includes:
+      - lang: "pt-br"
+  ru:
+    includes:
+      - lang: "ru"
+  es:
+    includes:
+      - lang: "es"
+  uk:
+    includes:
+      - lang: "uk"
+  vi:
+    includes:
+      - lang: "vi"
