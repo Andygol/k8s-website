@@ -8,7 +8,7 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="td-{{ .Kind }} td-blog {{- with .Page.Params.body_class }} {{ . }}{{ end }}">
+  <body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
     <header>
       {{ partial "navbar.html" . }}
       {{ partial "announcement.html" . }}
@@ -17,27 +17,21 @@
       <div class="td-main" {{- partialCached "td/scrollspy-attr.txt" . .Section | safeHTMLAttr }}>
         <div class="row flex-xl-nowrap">
           <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
-            {{ partial "blog/sidebar.html" . }}
+            {{ partial "sidebar.html" . }}
           </aside>
           <aside class="td-sidebar-toc">
             {{ partial "page-meta-links.html" . }}
             {{ partial "toc.html" . }}
             {{ partial "taxonomy_terms_clouds.html" . }}
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 ps-md-5 pe-md-4" role="main"
-              {{ if .IsPage }}data-pagefind-body data-pagefind-meta="date:{{ $.Date.Format "2006-01-02" }}"{{ end }}
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main"
+              {{ if .IsPage }}data-pagefind-body{{ end }}
             >
-            {{ with .CurrentSection.OutputFormats.Get "rss" -}}
-            <a class="td-rss-button" title="RSS" href="{{ .RelPermalink | safeURL }}" target="_blank" rel="noopener">
-              <i class="fa-solid fa-rss" aria-hidden="true"></i>
-            </a>
-            {{ end -}}
+            {{ partial "version-banner.html" . }}
             {{ if not (.Param "ui.breadcrumb_disable") -}}
               {{ partial "breadcrumb.html" . -}}
             {{ end -}}
-            {{ block "deprecation_warning" . }}
-              {{ partial "version-banner.html" . }}
-            {{ end }}
+            {{ block "deprecation_warning" . }}{{ end }}
             {{ block "main" . }}{{ end }}
           </main>
         </div>
