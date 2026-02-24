@@ -1,0 +1,589 @@
+# i18n strings for the English (main) site.
+# NOTE: Please keep the entries in alphabetical order when editing
+
+# For "and", see [conjunction_1]
+
+api_reference_title: API reference
+
+api_reference_page_related_concepts:
+  one: "Concept documentation for {{ .title }}"
+  other: "Related concept pages"
+
+auto_generated_edit_notice: "(auto-generated page)"
+
+auto_generated_pageinfo: "<p>This page is automatically generated.</p><p>If you plan to report an issue with this page, mention that the page is auto-generated in your issue description. The fix may need to happen elsewhere in the Kubernetes project.</p>"
+
+banner_acknowledgement: Hide this notice
+
+blog_mirrored_originally_published_at: This is a mirror of the <a href="{{ .canonicalUrl }}">original article</a>.
+
+
+blog_post_show_more: Show More Posts...
+
+browser_clipboard_support_warning: "Sorry, your browser doesn't support copying this example to your clipboard."
+
+case_study_prefix: "Case study:"
+
+caution: "Caution:"
+
+cleanup_heading: Cleaning up
+
+# Localization note (no need to translate this note)
+# This is always followed by Chinese text, as required by the Kubernetes
+# project's ICP license, issued by the government of the People's Republic
+# of China.
+china_icp_license: "ICP license:"
+
+community_advice_guidelines: "You can also read about our {{ .link }}."
+
+community_bluesky_name: Bluesky
+
+community_bluesky_fallback_text: Follow us on
+
+community_bluesky_link: "View on Bluesky"
+
+community_bluesky_loading: "Loading the latest news from Bluesky..."
+
+community_calendar_name: Events Calendar
+
+# Also cover [community_contribute] if localizing this site
+
+community_contributor_site_name: Contributor website
+
+# Also cover [community_develop] if localizing this site
+
+community_forum_name: Forum
+
+community_github_name: GitHub
+
+# Also cover [community_introduce] if localizing this site
+
+# Also cover [community_join] if localizing this site
+
+# Also cover [community_learn] if localizing this site
+
+community_linkedin_name: LinkedIn
+
+community_server_fault_name: Server Fault
+
+community_slack_name: Slack
+
+community_stack_overflow_name: Stack Overflow
+
+community_twitter_name: X (formerly Twitter)
+
+# Also cover [community_using] if localizing this site
+
+community_x_name: X (formerly Twitter)
+
+community_youtube_name: YouTube
+
+# Avoid using conjunction_1.
+# Must match the context in layouts/shortcodes/release-data.html
+# Appears on https://kubernetes.io/releases/
+# For example the "and" in "Complete 1.25 Schedule and Changelog"
+conjunction_1: and
+
+copy_sample_to_clipboard: "Copy {{ .filename }} to clipboard"
+
+cve_id: CVE ID
+
+cve_issue_url: CVE GitHub Issue URL
+
+cve_summary: Issue Summary
+
+cve_table: Official Kubernetes CVE List
+
+cve_table_date_format: "02 Jan 2006 15:04:05 MST"
+
+cve_table_date_format_string: "(last updated: %s)"
+
+deprecation_title: "You are viewing documentation for Kubernetes version:"
+
+deprecation_warning: " documentation is no longer actively maintained. The version you are currently viewing is a static snapshot. For up-to-date information, see the "
+
+deprecation_file_warning: Deprecated
+
+outdated_content_title: Information in this document may be out of date
+
+outdated_content_message: "This document has an older update date than the original, so the information it contains may be out of date. If you're able to read English, see the English version for the most up-to-date information: "
+
+dockershim_message: "Dockershim has been removed from the Kubernetes project as of release 1.24. Read the <a href=\"/dockershim\">Dockershim Removal FAQ</a> for further details."
+
+docs_label_browse: Browse Docs
+
+docs_label_contributors: Contributors
+
+docs_label_i_am: I AM...
+
+docs_label_users: Users
+
+docs_page_versions: "This %s is for Kubernetes %s. If you want to use a different Kubernetes version, please refer to the following pages instead:"
+
+docs_version_current: (this documentation)
+
+docs_version_latest_heading: Latest version
+
+docs_version_other_heading: Older versions
+
+docs_version_release_information: release information
+
+end_of_life: "End of Life:"
+
+envvars_heading: Environment variables
+
+error_404_were_you_looking_for: "Were you looking for:"
+
+error_copy_to_clipboard: Error
+
+examples_heading: Examples
+
+# Used with feature_gate_stage_* and then with either feature_gate_enabled or feature_gate_disabled
+# This localization string is for determining the punctuation and other details (including word order).
+## Localizers: you can put marks such as « and » around the .stage (if useful)
+feature_gate_details: "<span class=\"feature-state-stage\">{{ .stage }}</span> since {{ .kubernetes }} v{{ .version }}; {{ .enabled_or_disabled }}"
+
+## Localizers: you can put marks such as « and » around the .stage (if useful)
+feature_gate_details_partial: "<span class=\"feature-state-stage\">{{ .stage }}</span> since {{ .kubernetes }} v{{ .version }}"
+
+feature_gate_enabled: enabled by default
+
+feature_gate_disabled: disabled by default
+
+feature_gate_more_details: "More information about this feature"
+
+feature_gate_more_information_how_to_enable: |-
+  <p>To use this feature, you (or a cluster administrator) will need to enable the <a href=\"/docs/reference/command-line-tools-reference/feature-gates/#{{ .feature_gate_name }}\"><tt>{{ .feature_gate_name }}</tt></a> feature gate for all relevant components in your cluster.</p>
+  <p>See <a href=\"/docs/tasks/administer-cluster/configure-feature-gates/\">Enable Or Disable Feature Gates</a> for more information.</p>
+
+feature_gate_stable_graduated: "This is a stable feature in {{ .kubernetes }}, and has been since version {{ .stableVersion }}. It was first available in the v{{ .firstReleaseWithThisFeature }} release."
+
+feature_gate_stable_graduated_disabled: "This stable feature gate is disabled by default. You can no longer enable this feature gate to opt in to the associated behavior."
+
+feature_gate_stable_locked: "This is a stable feature in {{ .kubernetes }}, and has been since version v{{ .stableVersion }}. It was first available in the v{{ .firstReleaseWithThisFeature }} release. You can no longer disable or opt out of this feature or behavior (it is locked); if you explicitly set a value for the associated feature gate <tt>{{ .featureGateName }}</tt>, {{ .kubernetes }} ignores it but does not report any error."
+
+feature_gate_removed_after_ga: "This is a stable feature in {{ .kubernetes }}, and has been since the {{ .stableVersion }} release. You can no longer toggle this feature (the associated <a href=\"/docs/reference/command-line-tools-reference/feature-gates-removed/\">feature gate</a> has been removed)."
+
+feature_gate_removed_before_ga_final_version_clear: "{{ .kubernetes }} no longer includes this feature / behavior. The last release of {{ .kubernetes }} that recognized the <tt>{{ .featureGateName }}</tt> feature gate was {{ .toVersion }}. You can no longer toggle that setting."
+
+# Used when we somehow don't know when the feature gate was removed.
+feature_gate_removed_before_ga_final_version_unclear: "{{ .kubernetes }} no longer includes this feature / behavior. You can no longer toggle that setting."
+
+feature_gate_stage_alpha: Alpha
+
+feature_gate_stage_beta: Beta
+
+feature_gate_stage_stable: Stable
+
+feature_gate_stage_deprecated: Deprecated
+
+feature_gate_table_header_default: Default
+
+feature_gate_table_header_feature: Feature
+
+feature_gate_table_header_from: From
+
+feature_gate_table_header_since: Since
+
+feature_gate_table_header_stage: Stage
+
+feature_gate_table_header_to: To
+
+feature_gate_table_header_until: Until
+
+feature_state: "Feature state:"
+
+feature_state_kubernetes_label: Kubernetes
+
+feature_state_feature_gate_tooltip: "Feature Gate:"
+
+feedback_heading: Feedback
+
+feedback_no: "No"
+
+feedback_question: "Was this page helpful?"
+
+feedback_yes: "Yes"
+
+final_patch_release: Final Patch Release
+
+inline_list_separator: ","
+
+input_placeholder_email_address: email address
+
+javascript_required: "JavaScript must be [enabled](https://www.enable-javascript.com/) to view this content"
+
+katacoda_message: |-
+  <h4>Shutdown of interactive tutorials</h4>
+  <p>The interactive tutorials previously on this website have been shut down.</p>
+  <p>Kubernetes is grateful to O'Reilly and Katacoda for many years of helping
+  people take their first steps in learning Kubernetes.</p>
+  <p>The shutdown followed O'Reilly Media's 2019
+  <a href="https://www.oreilly.com/content/oreilly-acquires-katacoda-and-a-new-way-for-2-5m-customers-to-learn/">acquisition</a>
+  of Katacoda.</p>
+  <hr />
+  <p>The tutorials ceased to function after the <b>31<sup>st</sup> of March,
+  2023</b>. You are seeing this notice because this particular page has not yet been updated
+  following that shutdown.</p>
+
+kubecon_region_china: China
+
+kubecon_region_europe: Europe
+
+kubecon_region_event: Event
+
+kubecon_region_india: India
+
+kubecon_region_japan: Japan
+
+kubecon_region_north_america: North America
+
+kubectl_ref_collapse_all: Collapse all
+
+kubectl_ref_expand_all: Expand all
+
+kubectl_ref_search_placeholder: Search commands or description (e.g. config view, authorization)...
+
+kubectl_ref_view_full: View full reference
+
+kubernetes: Kubernetes
+
+latest_release: "Latest Release:"
+
+latest_version: latest version.
+
+layouts_blog_pager_next: "Next >>"
+
+layouts_blog_pager_prev: "<< Prev"
+
+layouts_case_studies_list_tell: Tell your story
+
+layouts_docs_glossary_aka: Also known as
+
+layout_docs_glossary_architecture_description: The inner components of Kubernetes.
+
+layout_docs_glossary_architecture_name: Architecture
+
+layouts_docs_glossary_click_details_after: indicators below to get a longer explanation for any particular term.
+
+layouts_docs_glossary_click_details_before: Click on the
+
+layout_docs_glossary_community_description: "Related to Kubernetes open-source development."
+
+layout_docs_glossary_community_name: Community
+
+layout_docs_glossary_core-object_description: A resource type that Kubernetes supports by default.
+
+layout_docs_glossary_core-object_name: Core Object
+
+layouts_docs_glossary_description: "This glossary is intended to be a comprehensive, standardized list of Kubernetes terminology. It includes technical terms that are specific to Kubernetes, as well as more general terms that provide useful context."
+
+layouts_docs_glossary_deselect_all: Deselect all
+
+layout_docs_glossary_extension_description: Supported customizations of Kubernetes.
+
+layout_docs_glossary_extension_name: Extension
+
+layouts_docs_glossary_filter: Filter terms according to their tags
+
+layout_docs_glossary_fundamental_description: "Relevant for a first-time user of Kubernetes."
+
+layout_docs_glossary_fundamental_name: Fundamental
+
+layout_docs_glossary_networking_description: How Kubernetes components talk to each other (and to programs outside the cluster).
+
+layout_docs_glossary_networking_name: Networking
+
+layout_docs_glossary_operation_description: Starting and maintaining Kubernetes.
+
+layout_docs_glossary_operation_name: Operation
+
+layout_docs_glossary_security_description: Keeping Kubernetes applications safe and secure.
+
+layout_docs_glossary_security_name: Security
+
+layouts_docs_glossary_select_all: Select all
+
+layout_docs_glossary_storage_description: How Kubernetes applications handle persistent data.
+
+layout_docs_glossary_storage_name: Storage
+
+layout_docs_glossary_tool_description: Software that makes Kubernetes easier or better to use.
+
+layout_docs_glossary_tool_name: Tool
+
+layout_docs_glossary_user-type_description: Represents a common type of Kubernetes user.
+
+layout_docs_glossary_user-type_name: User Type
+
+layout_docs_glossary_workload_description: Applications running on Kubernetes.
+
+layout_docs_glossary_workload_name: Workload
+
+layouts_docs_partials_feedback_improvement: suggest an improvement
+
+layouts_docs_partials_feedback_issue: "Open an issue in the [GitHub Repository](https://www.github.com/kubernetes/website/) if you want to "
+
+layouts_docs_partials_feedback_or: or
+
+layouts_docs_partials_feedback_problem: report a problem
+
+layouts_docs_partials_feedback_thanks: "Thanks for the feedback. If you have a specific, answerable question about how to use Kubernetes, ask it on"
+
+layouts_docs_search_fetching: Fetching results...
+
+legacy_repos_message: |-
+  The legacy package repositories (`apt.kubernetes.io` and `yum.kubernetes.io`) have been
+  [deprecated and frozen starting from September 13, 2023](/blog/2023/08/31/legacy-package-repository-deprecation/).
+  **Using the [new package repositories hosted at `pkgs.k8s.io`](/blog/2023/08/15/pkgs-k8s-io-introduction/)
+  is strongly recommended and required in order to install Kubernetes versions released after September 13, 2023.**
+  The deprecated legacy repositories, and their contents, might be removed at any time in the future and without
+  a further notice period. The new package repositories provide downloads for Kubernetes versions starting with v1.24.0.
+
+main_by: by
+
+main_cncf_project: "We are a <a href=\"https://cncf.io/\">CNCF</a> graduated project</p>"
+
+main_community_explore: Explore the community
+
+main_contribute: Contribute
+
+main_copyright_notice: "The Linux Foundation &reg;. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=\"https://www.linuxfoundation.org/trademark-usage\" class=\"light-text\">Trademark Usage page</a>"
+
+main_documentation_license: "The Kubernetes Authors | Documentation Distributed under <a href=\"https://git.k8s.io/website/LICENSE\" class=\"light-text\">CC BY 4.0</a>"
+
+main_github_invite: "Interested in hacking on the core Kubernetes code base?"
+
+main_github_view_on: View On GitHub
+
+main_kubernetes_features: Kubernetes Features
+
+main_kubeweekly_baseline: "Interested in receiving the latest Kubernetes news? Sign up for KubeWeekly."
+
+main_kubeweekly_past_link: View past newsletters
+
+main_kubeweekly_signup: Subscribe
+
+main_page_history: Page History
+
+main_page_last_modified_on: Page last modified on
+
+main_read_about: Read about
+
+main_read_more: Read more
+
+monthly_patch_release: Monthly Patch Release
+
+# Localization teams: it's OK to use a longer text here
+not_applicable: n/a
+
+note: "Note:"
+
+objectives_heading: Objectives
+
+options_heading: Options
+
+outdated_blog__message: This article is more than one year old. Older articles may contain outdated content. Check that the information in the page has not become incorrect since its publication.
+
+page_deprecated: (stale page)
+
+page_not_available_in_language: This page is not available in {{ .Language }}
+
+parentoptions_heading: Parent Options Inherited
+
+patch_release: Patch Release
+
+post_create_issue: Create an issue
+
+prerequisites_heading: Before you begin
+
+previous_patches: "Patch Releases:"
+
+release_actively_supported: Actively Supported
+
+release_announcement_blog: Release Announcement Blog
+
+# The following text is displayed when JavaScript isn't available.
+release_binary_alternate_links: |-
+  You can find links to download Kubernetes components (and their checksums) in the [CHANGELOG](https://github.com/kubernetes/kubernetes/tree/master/CHANGELOG) files.
+  Alternately, use [downloadkubernetes.com](https://www.downloadkubernetes.com/) to filter by version and architecture.
+
+release_binary_arch: Architecture
+
+release_binary_arch_option: Architectures
+
+release_binary_copy_link: Copy Link
+
+release_binary_copy_link_certifcate: cert
+
+release_binary_copy_link_checksum: checksum
+
+release_binary_copy_link_signature: signature
+
+release_binary_copy_link_tooltip: copy to clipboard
+
+release_binary_download: Download Binary
+
+release_binary_download_tooltip: download binary file
+
+release_binary_options: Download Options
+
+release_binary_os: Operating System
+
+release_binary_os_option: Operating Systems
+
+release_binary_os_darwin: darwin
+
+release_binary_os_linux: linux
+
+release_binary_os_windows: windows
+
+release_binary_table_caption: Download Kubernetes component binaries
+
+# NOTE: <current-version> is a placeholder for the actual version number set by 'release-binaries' shortcode.
+# Please do not localize or modify <current-version> placeholder.
+release_binary_section: |-
+  You can find the links to download <current-version> Kubernetes components (along with their checksums) below.
+  To access downloads for older supported versions, visit the respective documentation
+  link for [older versions](https://kubernetes.io/docs/home/supported-doc-versions/#versions-older) or use [downloadkubernetes.com](https://www.downloadkubernetes.com/).
+
+# NOTE: <current-version> and <current-changelog-url> are placeholders set by 'release-binaries' shortcode.
+# Please do not localize or modify <current-version> and <current-changelog-url>  placeholders.
+release_binary_section_note: |-
+  To download older patch versions of <current-version> Kubernetes components (and their checksums),
+  please refer to the [CHANGELOG](https://github.com/kubernetes/kubernetes/tree/master/CHANGELOG/CHANGELOG-<current-changelog-url>.md) file.
+
+release_binary_version: Version
+
+release_binary_version_option: Latest Version
+
+release_date_after: ")"
+
+release_date_before: "(released: "
+
+# See https://gohugo.io/methods/time/format/#layout-string
+# Use a suitable format for your locale. Avoid using :date_short
+# example: release_date_format: ":date_medium"
+release_date_format: "2006-01-02"
+
+# See https://gohugo.io/methods/time/format/#layout-string
+# Use a suitable format for your locale.
+release_date_format_month: January 2006
+
+release_details: View release details
+
+release_cherry_pick_deadline: Cherry Pick Deadline
+
+release_download_page: Download Kubernetes {{ .minor_version }}
+
+release_end_of_life: End Of Life
+
+release_end_of_life_date: End Of Life Date
+
+release_end_of_life_details_past: >+
+  This release has reached End of Life on {{ .release_eol_date }}.
+  Kubernetes {{ .minor_version }} is no longer receiving security updates or bug fixes. Upgrade to a [supported version](/releases/).
+
+release_github_tag: GitHub Tag
+
+release_latest_patch: Latest patch release
+
+release_links: Related Links
+
+release_maintenance_details_past: This release entered maintenance mode on {{ .maintenance_mode_start_date }}. Only critical security fixes are accepted. The End of Life date for Kubernetes {{ .minor_version }} is {{ .release_eol_date }}. Please plan to upgrade to a [newer version](/releases/).
+
+# Also see release_maintenance_and_end_of_life_details_past
+release_maintenance_and_end_of_life_details_current: "Kubernetes {{ .minor_version }} enters maintenance mode on {{ .maintenance_mode_start_date }}; the End of Life date for Kubernetes {{ .minor_version }} is {{ .release_eol_date }}."
+
+# Used if the maintenance mode date is in the past, otherwise
+# see release_maintenance_and_end_of_life_details_current
+release_maintenance_and_end_of_life_details_past: >+
+  ℹ️ **Kubernetes {{ .minor_version }} entered maintenance mode on {{ .maintenance_mode_start_date }}**.
+
+  The End of Life date for Kubernetes {{ .minor_version }} is {{ .release_eol_date }}.
+
+release_maintenance_mode: Maintenance Mode
+
+release_maintenance_mode_start_date: Maintenance Mode Start Date
+
+release_released_on: Released on {{ .date }}
+
+release_full_details_initial_text: Complete
+
+release_information_navbar: Release Information
+
+release_minor_version: Minor Version
+
+release_patch_releases_heading:
+  one: "Patch Release"
+  other: "Patch Releases"
+
+release_upcoming_patch_heading: "Upcoming Patch"
+
+release_info_next_patch: "Next patch release is **%s**."
+
+# Deprecated. Set release_maintenance_and_end_of_life_details_current
+# and release_maintenance_and_end_of_life_details_past instead.
+# OK to remove once all localizations have switched to the new strings.
+# Set this to "" if your localization implements the new strings.
+release_info_eol: ""
+
+release_note: Note
+
+release_schedule: Schedule
+
+release_series_page_intro: This page provides an overview of the Kubernetes {{ .minor_version }} release series.
+
+release_status: Release Status
+
+release_target_date: Target Date
+
+release_changelog: Changelog
+
+rss_link_label: RSS
+
+seealso_heading: See Also
+
+sidebar_toggle_nav: Toggle section navigation
+
+subscribe_button: Subscribe
+
+success_copy_to_clipboard: Success
+
+synopsis_heading: Synopsis
+
+tab_default: Tab {{ . }}
+
+theme_locked_notice: Theme fixed for this page
+
+thirdparty_message: "This section links to third party projects that provide functionality required by Kubernetes. The Kubernetes project authors aren't responsible for these projects, which are listed alphabetically. To add a project to this list, read the <a href=\"/docs/contribute/style/content-guide/#third-party-content\">content guide</a> before submitting a change. <a href=\"#third-party-content-disclaimer\">More information.</a>"
+
+thirdparty_message_edit_disclaimer: "Third party content advice"
+
+thirdparty_message_single_item: "&#128711; This item links to a third party project or product that is not part of Kubernetes itself. <a class=\"alert-more-info\" href=\"#third-party-content-disclaimer\">More information</a>"
+
+thirdparty_message_disclaimer: "<p>Items on this page refer to third party products or projects that provide functionality required by Kubernetes. The Kubernetes project authors aren't responsible for those third-party products or projects. See the <a href=\"https://github.com/cncf/foundation/blob/main/policies-guidance/website-guidelines.md\" target=\"_blank\">CNCF website guidelines</a> for more details.</p><p>You should read the <a href=\"/docs/contribute/style/content-guide/#third-party-content\">content guide</a> before proposing a change that adds an extra third-party link.</p>"
+
+thirdparty_message_vendor: "Items on this page refer to vendors external to Kubernetes. The Kubernetes project authors aren't responsible for those third-party products or projects. To add a vendor, product or project to this list, read the <a href=\"/docs/contribute/style/content-guide/#third-party-content\">content guide</a> before submitting a change. <a href=\"#third-party-content-disclaimer\">More information.</a>"
+
+toast_failure_copycode: "Failed to copy to clipboard: "
+
+toast_success_copycode: "Copied to clipboard: "
+
+translated_by: Translated By
+
+ui_search: Search this site
+
+version_check_mustbe: "Your Kubernetes server must be version "
+
+version_check_mustbeorlater: "Your Kubernetes server must be at or later than version "
+
+version_check_tocheck: "To check the version, enter "
+
+version_menu: Versions
+
+warning: "Warning:"
+
+warning_copy_to_clipboard: Warning
+
+whatsnext_heading: "What's next"

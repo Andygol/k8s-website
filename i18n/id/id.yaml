@@ -1,0 +1,154 @@
+# i18n strings for the Indonesian version of the site (https://kubernetes.io/id/)
+# NOTE: Please keep the entries in alphabetical order when editing
+
+caution: "Perhatian:"
+
+cleanup_heading: Bersihkan
+
+community_events_calendar: Kalender Acara
+
+community_forum_name: Forum
+
+community_github_name: GitHub
+
+community_linkedin_name: LinkedIn
+
+community_slack_name: Slack
+
+community_stack_overflow_name: Stack Overflow
+
+community_twitter_name: Twitter
+
+community_youtube_name: YouTube
+
+deprecation_title: "Kamu sedang menampilkan dokumentasi untuk Kubernetes versi:"
+
+deprecation_warning: " dokumentasi sudah tidak dirawat lagi. Versi yang kamu lihat ini hanyalah snapshot statis. Untuk dokumentasi terkini, lihat "
+
+deprecation_file_warning: Sudah usang
+
+docs_label_browse: Telusuri Dokumentasi
+
+docs_label_contributors: Kontributor
+
+docs_label_i_am: AKU...
+
+docs_label_users: Pengguna
+
+docs_version_current: (dokumentasi ini)
+
+docs_version_latest_heading: Versi terbaru
+
+docs_version_other_heading: Versi lama
+
+error_404_were_you_looking_for: "Apakah kamu sedang mencari:"
+
+examples_heading: Contoh
+
+feedback_heading: Masukan
+
+feedback_no: Tidak
+
+feedback_question: "Apakah halaman ini membantu?"
+
+feedback_yes: Ya
+
+input_placeholder_email_address: alamat email
+
+latest_version: versi terbaru.
+
+layouts_blog_pager_prev: "<< Sebelumnya"
+
+layouts_blog_pager_next: "Selanjutnya >>"
+
+layouts_case_studies_list_tell: Ceritakan kisahmu
+
+layouts_docs_glossary_aka: Dikenal juga sebagai
+
+layouts_docs_glossary_description: "Glosarium ini dimaksudkan sebagai daftar terminologi Kubernetes yang komprehensif dan terstandardisasi. Glosarium ini mencakup istilah-istilah teknis yang spesifik digunakan di Kubernetes, serta beberapa istilah umum untuk membantu memberikan konteks."
+
+layouts_docs_glossary_deselect_all: Hapus semua pilihan
+
+layouts_docs_glossary_click_details_after: indikator di bawah ini untuk mendapatkan penjelasan yang lebih lengkap untuk istilah tertentu.
+
+layouts_docs_glossary_click_details_before: Klik pada
+
+layouts_docs_glossary_filter: Filter istilah sesuai dengan penandanya
+
+layouts_docs_glossary_select_all: Pilih semua
+
+layouts_docs_partials_feedback_improvement: beri saran perbaikan
+
+layouts_docs_partials_feedback_issue: "Buat isu di repositori GitHub jika kamu ingin "
+
+layouts_docs_partials_feedback_or: atau
+
+layouts_docs_partials_feedback_problem: laporkan problem
+
+layouts_docs_partials_feedback_thanks: "Terima kasih atas masukannya. Jika kamu mempunyai pertanyaan yang spesifik terkait bagaimana menggunakan Kubernetes, tanyakanlah di "
+
+layouts_docs_search_fetching: Mengambil hasil...
+
+main_by: oleh
+
+main_cncf_project: "Kami merupakan proyek yang lulus dari <a href=\"https://cncf.io/\">CNCF</a></p>"
+
+main_community_explore: Jelajahi komunitas
+
+main_contribute: Bantu
+
+main_copyright_notice: "Linux Foundation &reg;. Hak cipta dilindungi. Linux Foundation telah mendaftarkan merek dagang dan pengunaannya. Perinciannya bisa dilihat pada <a href=\"https://www.linuxfoundation.org/trademark-usage\" class=\"light-text\">halaman penggunaan merek dagang</a>"
+
+main_documentation_license: "Para Pencipta Kubernetes | Dokumentasi didistribusikan di bawah <a href=\"https://git.k8s.io/website/LICENSE\" class=\"light-text\">CC BY 4.0</a>"
+
+main_github_invite: "Tertarik untuk mengulik kode dari Kubernetes?"
+
+main_github_view_on: Lihat di GitHub
+
+main_kubernetes_features: Fitur Kubernetes
+
+main_kubeweekly_baseline: "Tertarik untuk mendapatkan info terbaru tentang Kubernetes? Daftarkan dirimu ke KubeWeekly."
+
+main_kubeweekly_past_link: Lihat buletin edisi sebelumnya
+
+main_kubeweekly_signup: Langganan
+
+main_page_history: Riwayat laman
+
+main_page_last_modified_on: Halaman diubah terakhir kali pada
+
+main_read_about: Baca tentang
+
+main_read_more: Baca lebih lanjut
+
+note: "Catatan:"
+
+objectives_heading: Tujuan
+
+options_heading: Opsi
+
+post_create_issue: Buat isu
+
+prerequisites_heading: Sebelum kamu memulai
+
+seealso_heading: Lihat juga
+
+subscribe_button: Langganan
+
+synopsis_heading: Sinopsis
+
+thirdparty_message: "Bagian ini tertaut ke proyek-proyek pihak ketiga yang menyediakan fungsionalitas yang dibutuhkan oleh Kubernetes. Pencipta proyek Kubernetes tidak bertanggung jawab atas proyek-proyek tersebut. Laman ini mengikuti <a href=\"https://github.com/cncf/foundation/blob/master/website-guidelines.md\" target=\"_blank\">pedoman website CNCF</a> dengan membuat daftar proyek menurut abjad. Untuk menambakan proyek ke dalam daftar ini, bacalah <a href=\"/docs/contribute/style/content-guide/#third-party-content\">panduan</a> sebelum mengirimkan perubahan."
+
+ui_search: Cari
+
+version_check_mustbe: "Kubernetes servermu harus dalam versi "
+
+version_check_mustbeorlater: "Kubernetes servermu harus dalam versi yang sama atau lebih baru dari "
+
+version_check_tocheck: "Untuk melihat versi, tekan "
+
+version_menu: Versi
+
+warning: "Peringatan:"
+
+whatsnext_heading: Selanjutnya
