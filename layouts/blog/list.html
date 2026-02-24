@@ -23,7 +23,8 @@ have blog posts -->
 					<h5 class="mt-0 mb-1"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h5>
 					<p class="mb-2 mb-md-3">
 						<small class="text-muted">
-							{{ with .Params.author }}{{ T "post_byline_by" }} <b>{{ . | markdownify }}</b> |{{ end}}
+							{{ with .Params.author }}{{ T "post_byline_by" }} <b>{{ . | markdownify }}</b> | {{ end}}
+							{{ with .Params.translator }}{{ T "translated_by" }} <b>{{ . | markdownify }}</b> | {{ end}}
 							{{ .Date.Format ($.Param "time_format_blog") }} {{ T "ui_in"}} {{ .CurrentSection.LinkTitle }}
 						</small>
 					</p>
