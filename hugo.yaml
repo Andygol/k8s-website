@@ -172,6 +172,7 @@ params:
     breadcrumb_disable: false
     sidebar_search_disable: false
     navbar_logo: true
+    showLightDarkModeMenu: true
     footer_about_disable: false
     feedback:
       enable: true
