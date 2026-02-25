@@ -3,6 +3,9 @@ Add styles or import other files. */
 
 @import "reset";
 
+// Import Docsy dark mode adjustments - provides baseline dark mode improvements
+@import "../../node_modules/docsy/assets/scss/td/color-adjustments-dark";
+
 //K8S-Docsy integration
 @import "custom";
 
