@@ -19,7 +19,7 @@ $vendor-strip-font-size: 16px;
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 body {
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-body-bg, white);
 
   a {
     color: $primary;
@@ -28,7 +28,7 @@ body {
 
 section {
   position: relative;
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-body-bg, white);
 }
 
 section,
@@ -354,7 +354,7 @@ $ocean-nodes-h3-margin-bottom: 30px;
 
   #desktopShowVideoButton {
     font-size: 1.8rem;
-    background-color: white;
+    background-color: var(--bs-body-bg, white);
     border-radius: 8px;
     color: $secondary;
     padding: 1.5rem;
@@ -399,7 +399,7 @@ $ocean-nodes-h3-margin-bottom: 30px;
       left: 10%;
       width: 80%;
       height: 2px;
-      background-color: white;
+      background-color: var(--bs-body-bg, white);
     }
 
     &:before {

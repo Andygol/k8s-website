@@ -1,28 +1,10 @@
-{{/* Handle legacy Kubernetes shortcode for Mermaid diagrams */}}
+{{/* Set flags for Docsy native mermaid and katex loading */}}
 {{- if (.HasShortcode "mermaid") -}}
-{{ .Page.Store.Set "hasmermaid" true -}}
+{{ .Page.Store.Set "hasmermaid" true }}
 {{- end -}}
 
-{{- if .Page.Store.Get "hasmermaid" -}}
-{{- partial "scripts/mermaid.html" . -}}
-{{- end -}}
-
-{{ $needKaTeX  := or .Site.Params.katex.enable .Params.math .Params.chem -}}
-{{ if  $needKaTeX -}}
-{{/* load stylesheet and scripts for KaTeX support */ -}}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"
-      integrity="sha512-r2+FkHzf1u0+SQbZOoIz2RxWOIWfdEzRuYybGjzKq18jG9zaSfEy9s3+jMqG/zPtRor/q4qaUCYQpmSjTw8M+g==" crossorigin="anonymous">
-  {{/* The loading of KaTeX is deferred to speed up page rendering */ -}}
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"
-        integrity="sha512-INps9zQ2GUEMCQD7xiZQbGUVnqnzEvlynVy6eqcTcHN4+aQiLo9/uaQqckDpdJ8Zm3M0QBs+Pktg4pz0kEklUg=="
-        crossorigin="anonymous">
-</script>
-  {{/* To automatically render math in text elements, include the auto-render extension: */ -}}
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
-       integrity="sha512-YJVxTjqttjsU3cSvaTRqsSl0wbRgZUNF+NGGCgto/MUbIvaLdXQzGTCQu4CvyJZbZctgflVB0PXw9LLmTWm5/w==" crossorigin="anonymous"
-       {{ printf "onload='renderMathInElement(%s, %s);'" (( $.Page.Site.Params.katex.html_dom_element | default "document.body" ) | safeJS ) ( printf "%s" ( $.Page.Site.Params.katex.options | jsonify )) | safeHTMLAttr }}>
-</script>
-{{ end -}}
+{{/* Docsy dark mode support */}}
+{{- $darkMode := partialCached "dark-mode-config.html" "dark-mode-global" -}}
 
 {{ $jsBs := resources.Get "vendor/bootstrap/dist/js/bootstrap.bundle.js" -}}
 {{ $jsBase := resources.Get "js/base.js" }}
@@ -40,12 +22,24 @@
 {{ with $jsAnchor }}{{ $jsResources = $jsResources | append . }}{{ end }}
 {{ with $jsNav }}{{ $jsResources = $jsResources | append . }}{{ end }}
 {{ with $jsSearch }}{{ $jsResources = $jsResources | append . }}{{ end }}
+{{- if $darkMode.enable -}}
+{{ $jsDarkMode := resources.Get "js/dark-mode.js" }}
+{{ with $jsDarkMode }}{{ $jsResources = $jsResources | append . }}{{ end }}
+{{- end }}
 {{ $js := $jsResources | resources.Concat "js/main.js" -}}
 {{ if hugo.IsProduction -}}
   {{ $js := $js | minify | fingerprint -}}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>
 {{ else -}}
   <script src="{{ $js.RelPermalink }}"></script>
+{{ end -}}
+
+{{/* Load mermaid and katex using Docsy native partials */}}
+{{ if .Page.Store.Get "hasmermaid" -}}
+  {{ partial "scripts/mermaid.html" . -}}
+{{ end -}}
+{{ if .Page.Store.Get "hasMath" -}}
+  {{ partial "scripts/katex.html" . -}}
 {{ end -}}
 
 {{ if .Site.Params.prism_syntax_highlighting -}}

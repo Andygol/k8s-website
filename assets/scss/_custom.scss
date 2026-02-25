@@ -2129,8 +2129,428 @@ section.k8s-birthday-override:has(div.k8s-birthday-override.revert-to-previous i
   }
 }
 
-@media print {
-  header a.navbar-brand {
-    visibility: hidden;
+/* Dark mode styles - Docsy native */
+[data-bs-theme="dark"] {
+  body, section {
+    background-color: var(--bs-body-bg, #0d1117) !important;
+    color: var(--bs-body-color, #e6e6e6);
+  }
+
+  .td-navbar {
+    background-color: #161b22 !important;
+    border-bottom: 1px solid #30363d;
+  }
+
+  .td-navbar .nav-link {
+    color: #e6e6e6 !important;
+  }
+
+  .header-hero {
+    background-color: #161b22 !important;
+  }
+
+  .features-container {
+    background-color: #0d1117 !important;
+  }
+
+  .feature-box {
+    background-color: #161b22 !important;
+    border: 1px solid #30363d;
+  }
+
+  .feature-box h3 {
+    color: #e6e6e6 !important;
+  }
+
+  .feature-box p {
+    color: #8b949e !important;
+  }
+
+  footer {
+    background-color: #161b22 !important;
+    border-top: 1px solid #30363d;
+  }
+
+  footer a {
+    color: #58a6ff !important;
+  }
+
+  footer p {
+    color: #8b949e !important;
+  }
+
+  #announcement a {
+    color: #000000 !important;
+  }
+
+  #announcement p {
+    color: #000000 !important;
+  }
+
+  #announcement h1, #announcement h2, #announcement h3, #announcement h4, #announcement h5, #announcement h6 {
+    color: #000000 !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #e6e6e6 !important;
+  }
+
+  p {
+    color: #c9d1d9 !important;
+  }
+
+  .glossary-tooltip {
+    border-bottom: 1px dotted #8b949e;
+    color: #c9d1d9 !important;
+    text-decoration: none !important;
+  }
+
+  .card {
+    background-color: #161b22 !important;
+    border-color: #30363d !important;
+  }
+
+  .card-body {
+    background-color: #161b22 !important;
+    color: #e6e6e6;
+  }
+
+  #caseStudiesWrapper {
+    background-color: #0d1117 !important;
+  }
+
+  #video #desktopShowVideoButton {
+    background-color: #161b22 !important;
+    color: #e6e6e6 !important;
+  }
+
+  #talkToUs {
+    background-color: #0d1117 !important;
+  }
+
+  #kubeweekly {
+    background-color: #161b22 !important;
+  }
+
+  [data-bs-theme="dark"] .td-search-input {
+    background-color: #0d1117 !important;
+    color: #e6e6e6 !important;
+    border-color: #30363d !important;
+  }
+
+
+
+  .td-search-icon {
+    color: #8b949e !important;
+  }
+
+  pre {
+    background-color: #161b22 !important;
+    color: #e6e6e6 !important;
+  }
+
+  code {
+    background-color: #161b22 !important;
+    color: #e6e6e6 !important;
+  }
+
+  :not(pre) > code {
+    background-color: #161b22 !important;
+    color: #e6e6e6 !important;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+  }
+
+  .highlight {
+    background-color: #161b22 !important;
+  }
+
+  .highlight pre {
+    background-color: #161b22 !important;
+  }
+
+  .mermaid {
+    background-color: #161b22 !important;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .mermaid svg {
+    background-color: #161b22 !important;
+  }
+}
+
+
+
+/* Dark mode search input and placeholder */
+[data-bs-theme="dark"] .td-navbar .td-search__input,
+[data-bs-theme="dark"] .td-search .td-search__input,
+[data-bs-theme="dark"] .td-navbar .td-search__input::placeholder,
+[data-bs-theme="dark"] .td-search .td-search__input::placeholder {
+  background-color: #0d1117 !important;
+  color: #e6e6e6 !important;
+}
+
+/* Dark mode search icon */
+[data-bs-theme="dark"] .td-navbar .td-search__icon,
+[data-bs-theme="dark"] .td-search .td-search__icon,
+[data-bs-theme="dark"] .td-search-icon {
+  color: #e6e6e6 !important;
+}
+
+
+/* ============================================
+ * Dark mode styles for Training page
+ * ============================================ */
+[data-bs-theme="dark"] body.cid-training {
+  // Call-to-action section - blue background stays, but text may need adjustment
+  section.call-to-action {
+    background-color: #1a4375 !important;
+
+    .cta-text {
+      h2, p {
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  // Column container and navigation cards
+  .col-container {
+    background-color: transparent;
+  }
+
+  .col-nav {
+    background-color: #1c2128 !important;
+    border-color: #30363d !important;
+
+    h5, p {
+      color: #c9d1d9 !important;
+    }
+
+    a.button {
+      background-color: #326ce5 !important;
+      color: #ffffff !important;
+
+      &:hover {
+        background-color: #2357b0 !important;
+      }
+    }
+  }
+
+  // Lighter gray backgrounds
+  .lighter-gray-bg {
+    background-color: #161b22 !important;
+
+    h2, p {
+      color: #c9d1d9 !important;
+    }
+  }
+
+  // Two-thirds centered sections
+  .two-thirds-centered {
+    h2, p {
+      color: #c9d1d9 !important;
+    }
+
+    a.button {
+      background-color: #326ce5 !important;
+      color: #ffffff !important;
+
+      &:hover {
+        background-color: #2357b0 !important;
+      }
+    }
+  }
+
+  // Get certified section
+  #get-certified {
+    h2 {
+      color: #e6e6e6 !important;
+    }
+  }
+
+  // Kubestronaut section
+  #cta-kubestronaut {
+    background-color: #1c2128 !important;
+
+    h2, p {
+      color: #c9d1d9 !important;
+    }
+  }
+
+  // Headings and paragraphs throughout
+  h2 {
+    color: #e6e6e6 !important;
+  }
+
+  h5 {
+    color: #e6e6e6 !important;
+  }
+
+  p {
+    color: #c9d1d9 !important;
+  }
+}
+
+/* ============================================
+ * Dark mode styles for Partners page
+ * ============================================ */
+[data-bs-theme="dark"] body.cid-partners {
+  // Users section (main partner section)
+  section#users {
+    background-color: #0d1117 !important;
+
+    h5 {
+      color: #e6e6e6 !important;
+    }
+
+    p {
+      color: #c9d1d9 !important;
+    }
+  }
+
+  // Column container and cards
+  .col-container {
+    background-color: transparent;
+  }
+
+  .col-nav {
+    background-color: #1c2128 !important;
+    border-color: #30363d !important;
+
+    h5 {
+      color: #e6e6e6 !important;
+    }
+
+    p {
+      color: #c9d1d9 !important;
+    }
+
+    .button {
+      background-color: #326ce5 !important;
+      color: #ffffff !important;
+
+      &:hover {
+        background-color: #2357b0 !important;
+      }
+    }
+  }
+
+  // Landscape iframe container
+  .landscape-section {
+    background-color: #0d1117 !important;
+  }
+}
+
+/* ============================================
+ * Dark mode styles for Community page
+ * ============================================ */
+[data-bs-theme="dark"] body.cid-community {
+  // Navigation items
+  #navigation-items {
+    background-color: #161b22 !important;
+    border-color: #30363d !important;
+
+    .community-nav-item {
+      background-color: #21262d !important;
+      color: #c9d1d9 !important;
+
+      a {
+        color: #58a6ff !important;
+
+        &:hover {
+          color: #79c0ff !important;
+        }
+      }
+    }
+  }
+
+  // Community sections
+  .community-section {
+    background-color: #0d1117 !important;
+
+    h2 {
+      color: #e6e6e6 !important;
+    }
+
+    p {
+      color: #c9d1d9 !important;
+    }
+  }
+
+  // Community buttons
+  a.community-cta-button {
+    background-color: #326ce5 !important;
+    color: #ffffff !important;
+
+    &:hover {
+      background-color: #2357b0 !important;
+    }
+  }
+
+  .fullbutton {
+    background-color: #326ce5 !important;
+    color: #ffffff !important;
+
+    &:hover {
+      background-color: #2357b0 !important;
+    }
+  }
+
+  // Videos section
+  #videos {
+    background-color: #161b22 !important;
+
+    .videocta {
+      color: #58a6ff !important;
+
+      &:hover {
+        color: #79c0ff !important;
+      }
+    }
+  }
+
+  // Resource boxes
+  .resourcebox {
+    background-color: #1c2128 !important;
+    border-color: #30363d !important;
+
+    a {
+      color: #58a6ff !important;
+    }
+  }
+
+  // Legacy community styles
+  .intro, .conduct, .conducttext {
+    color: #c9d1d9 !important;
+  }
+
+  // Meetups section
+  .community-section#meetups {
+    .meetuptext {
+      color: #ffffff !important;
+    }
+  }
+
+  // Events section
+  .community-section#events {
+    background-color: #161b22 !important;
+  }
+
+  // Values section
+  .community-section#values {
+    background-color: #161b22 !important;
+    color: #c9d1d9 !important;
+  }
+
+  // Code of conduct
+  #cncf-code-of-conduct {
+    h2 {
+      color: #58a6ff !important;
+    }
+  }
+
+  // Details/summary
+  details > summary {
+    color: #c9d1d9 !important;
   }
 }

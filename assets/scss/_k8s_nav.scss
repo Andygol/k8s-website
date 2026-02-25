@@ -189,7 +189,7 @@
     top: 0;
     width: 0;
     height: 100%;
-    background-color: var(--bs-body-bg);
+    background-color: var(--bs-body-bg, white);
     overflow: auto;
     transition: 0.3s;
 
