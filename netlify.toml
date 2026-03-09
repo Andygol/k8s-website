@@ -25,6 +25,6 @@ publish = "public"
 command = "git submodule update --init --recursive --depth 1 && make production-build && npx -y pagefind --site public"
 
 [context.production.environment]
-HUGO_BASEURL = "https://kubernetes.io/"
+HUGO_BASEURL = "https://andygol-k8s.netlify.app/"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"

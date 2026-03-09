@@ -1,4 +1,4 @@
-baseURL: "https://kubernetes.io"
+baseURL: "https://andygol-k8s.netlify.app/"
 title: "Kubernetes"
 theme:
   - docsy
@@ -6,7 +6,7 @@ themesDir: "node_modules"
 contentDir: "content/en"
 defaultContentLanguage: "en"
 defaultContentLanguageInSubdir: false
-timeZone: "UTC"
+timeZone: "Etc/UTC"
 enableRobotsTXT: true
 disableBrowserError: true
 disableKinds:
@@ -29,6 +29,9 @@ caches:
   images:
     dir: ":cacheDir/_images"
     maxAge: -1
+  modulequeries:
+    dir: :cacheDir/modules
+    maxAge: 24h
   modules:
     dir: ":cacheDir/modules"
     maxAge: -1
@@ -40,7 +43,9 @@ markup:
       table: true
       typographer: false
     parser:
-      attribute: true
+      attribute:
+        block: false
+        title: true
       autoHeadingID: true
       autoHeadingIDType: "blackfriday"
     renderer:
@@ -108,7 +113,7 @@ outputFormats:
 imaging:
   resampleFilter: "CatmullRom"
   quality: 75
-  anchor: "smart"
+  anchor: "Smart"
 
 services:
   googleAnalytics:

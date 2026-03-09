@@ -77,7 +77,7 @@ serve: module-check ## Boot the development server.
 
 serve-netlify: module-check ## Boot the development server with Netlify CLI (includes redirects).
 	$(HUGO) --buildDrafts --buildFuture --environment development
-	$(NODE_BIN)/netlify dev --targetPort 1313
+	$(NODE_BIN)/netlify dev --target-port 1313
 
 docker-image:
 	@echo -e "$(CCRED)**** The use of docker-image is deprecated. Use container-image instead. ****$(CCEND)"
