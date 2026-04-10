@@ -1482,6 +1482,17 @@ body.td-documentation {
   padding-top: 40px;
 }
 
+// Keep home hero content clear of the fixed navbar row.
+body.td-home .header-hero {
+  padding-top: 112px;
+}
+
+@media (max-width: 992px) {
+  body.td-home .header-hero {
+    padding-top: 96px;
+  }
+}
+
 // Don't show announcements when javascript is not available
 
 html.no-js body div#announcement {
