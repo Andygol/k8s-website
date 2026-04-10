@@ -87,6 +87,12 @@ body.td-section:not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid
   --td-navbar-border-bottom: 1px solid var(--bs-border-color);
 }
 
+// Nested docs pages use td-page instead of td-section.
+body.td-page:not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-community) .td-navbar {
+  border-bottom: 1px solid var(--bs-border-color) !important;
+  --td-navbar-border-bottom: 1px solid var(--bs-border-color);
+}
+
 .td-navbar .td-navbar-nav-scroll--indicator .scroll-indicator {
   color: $navbar-dark-color;
 }
