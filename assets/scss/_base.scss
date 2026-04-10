@@ -662,7 +662,7 @@ body.td-home section.features-container {
 }
 
 footer.row {
-  margin-left: initial;
-  margin-right: initial;
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
 }
 
