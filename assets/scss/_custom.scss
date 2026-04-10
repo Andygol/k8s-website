@@ -1684,7 +1684,21 @@ figure.release-logo {
 }
 
 
-// Match Docsy-imposed max width on text body
+// Remove Docsy text width clamp so body text can use full content width.
+.td-content > p,
+.td-content > ul,
+.td-content > ol,
+.td-content > blockquote,
+.td-content > .lead,
+.td-content > h1,
+.td-content > h2,
+.td-content > h3,
+.td-content > h4,
+.td-content > h5,
+.td-content > h6 {
+  max-width: 100% !important;
+}
+
 @media (min-width: 1200px) {
   body.td-blog main .td-content > figure {
     max-width: 80%;
