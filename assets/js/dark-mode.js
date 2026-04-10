@@ -15,55 +15,6 @@
   const getStoredTheme = () => localStorage.getItem(themeKey)
   const setStoredTheme = theme => localStorage.setItem(themeKey, theme)
 
-  // Mermaid dark mode support
-  const initMermaidDarkMode = () => {
-    // Check if mermaid is available
-    if (typeof mermaid === 'undefined') {
-      return;
-    }
-    
-    const isDark = document.documentElement.getAttribute('data-bs-theme') === 'dark';
-    
-    mermaid.initialize({
-      startOnLoad: false,
-      theme: isDark ? 'dark' : 'default',
-      securityLevel: 'loose',
-      themeVariables: isDark ? {
-        darkMode: true,
-        background: '#0d1117',
-        primaryColor: '#161b22',
-        primaryTextColor: '#e6e6e6',
-        primaryBorderColor: '#30363d',
-        lineColor: '#8b949e',
-        secondaryColor: '#161b22',
-        tertiaryColor: '#21262d',
-        mainBkg: '#161b22',
-        secondBkg: '#21262d',
-        border1: '#30363d',
-        border2: '#21262d',
-        arrowheadColor: '#8b949e',
-        fontFamily: 'inherit',
-        fontSize: '14px',
-        textColor: '#e6e6e6',
-        nodeTextColor: '#e6e6e6',
-        actorBorder: '#30363d',
-        actorBkg: '#161b22',
-        actorTextColor: '#e6e6e6',
-        actorLineColor: '#8b949e',
-        signalColor: '#8b949e',
-        signalTextColor: '#e6e6e6'
-      } : {}
-    });
-    
-    // Re-render all mermaid diagrams - use the correct method for mermaid version
-    if (typeof mermaid.run === 'function') {
-      mermaid.run();
-    } else if (typeof mermaid.init === 'function') {
-      mermaid.init();
-    }
-    mermaid.run();
-  };
-
   const getPreferredTheme = () => {
     const storedTheme = getStoredTheme()
     if (storedTheme) {
@@ -79,13 +30,7 @@
     } else {
       document.documentElement.setAttribute('data-bs-theme', theme)
     }
-    
-    // Update mermaid diagrams when theme changes
-    if (typeof mermaid !== 'undefined') {
-      setTimeout(() => {
-        initMermaidDarkMode();
-      }, 100);
-    }
+
   }
 
   setTheme(getPreferredTheme())
@@ -131,13 +76,6 @@
 
   window.addEventListener('DOMContentLoaded', () => {
     showActiveTheme(getPreferredTheme())
-    
-    // Initialize mermaid with current theme
-    if (typeof mermaid !== 'undefined') {
-      setTimeout(() => {
-        initMermaidDarkMode();
-      }, 500);
-    }
 
     document.querySelectorAll('[data-bs-theme-value]')
       .forEach(toggle => {

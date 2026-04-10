@@ -22,8 +22,10 @@ and [blog articles](/docs/contribute/blog/).
 
 <!-- See https://github.com/kubernetes/website/issues/28808 for live-editor URL to this figure -->
 <!-- You can also cut/paste the mermaid code into the live editor at https://mermaid-js.github.io/mermaid-live-editor to play around with it -->
+<div class="mermaid-light-surface">
 {{< mermaid >}}
-flowchart LR 
+%%{init: {'theme': 'default'}}%%
+flowchart LR
     subgraph second[Before you begin]
     direction TB
     S[ ] -.-
@@ -38,10 +40,10 @@ flowchart LR
        E --- G['/content/../docs' folder contains docs<br>for multiple languages]
        G --- H[Review Hugo page content<br>types and shortcodes]
     end
-    
+
 
     first ----> second
-     
+
 
 classDef grey fill:#dddddd,stroke:#ffffff,stroke-width:px,color:#000000, font-size:15px;
 classDef white fill:#ffffff,stroke:#000,stroke-width:px,color:#000,font-weight:bold
@@ -50,6 +52,7 @@ class A,B,C,D,E,F,G,H grey
 class S,T spacewhite
 class first,second white
 {{</ mermaid >}}
+</div>
 
 ***Figure - Contributing new content preparation***
 
@@ -64,7 +67,7 @@ prior to submitting new content. The information details follow.
 
 - Write Kubernetes documentation in Markdown and build the Kubernetes site
   using [Hugo](https://gohugo.io/).
-- Kubernetes documentation uses [CommonMark](https://commonmark.org/) as its flavor of  Markdown. 
+- Kubernetes documentation uses [CommonMark](https://commonmark.org/) as its flavor of  Markdown.
 - The source is in [GitHub](https://github.com/kubernetes/website). You can find
   Kubernetes documentation at `/content/en/docs/`. Some of the reference
   documentation is automatically generated from scripts in

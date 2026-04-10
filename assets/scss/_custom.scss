@@ -1783,8 +1783,6 @@ dl {
   font-weight: bold;
 }
 
-
-
 div.alert > em.javascript-required {
   display: inline-block;
   min-height: 1.5em;
@@ -1997,7 +1995,7 @@ body.td-home section#upcoming-events > .col > .row {
 
   flex-direction: row;
   row-gap: 0.25rem;
-  column-gap: calc(clamp(1rem, 5vw, 6rem));
+  column-gap: clamp(1rem, 5vw, 6rem);
   justify-content: center;
   flex-wrap: wrap;
 
@@ -2107,7 +2105,9 @@ body.td-home section.case-studies {
 }
 
 @media screen and (max-aspect-ratio: 9/15) {
+  .features-container {
     gap: 0.4rem;
+  }
 }
 
 @media screen and (min-width: 1281px) {
@@ -2288,15 +2288,25 @@ section.k8s-birthday-override:has(div.k8s-birthday-override.revert-to-previous i
     background-color: #161b22 !important;
   }
 
-  .mermaid {
-    background-color: #161b22 !important;
-    padding: 10px;
-    border-radius: 8px;
+  .mermaid-light-surface .mermaid,
+  .mermaid-light-surface .mermaid svg {
+    background-color: #ffffff !important;
   }
 
-  .mermaid svg {
-    background-color: #161b22 !important;
+  .mermaid-light-surface .mermaid {
+    border-radius: 6px;
+    padding: 0.5rem;
   }
+
+  .mermaid-light-surface .mermaid p,
+  .mermaid-light-surface .mermaid span,
+  .mermaid-light-surface .mermaid .nodeLabel,
+  .mermaid-light-surface .mermaid .label,
+  .mermaid-light-surface .mermaid text {
+    color: #333333 !important;
+    fill: #333333 !important;
+  }
+
 }
 
 
