@@ -594,6 +594,35 @@ body.docs-portal {
   }
 }
 
+[data-bs-theme="dark"] body.docs-portal {
+  .launch-cards {
+    .launch-card:has(button) {
+      background: #3b3f46;
+      color: #f8f9fa;
+    }
+
+    .launch-card:hover {
+      background: #4f535a;
+      color: #e6e6e6;
+    }
+
+    .launch-card .card-content {
+      h2,
+      p {
+        color: inherit;
+      }
+
+      > ul > li a {
+        color: #84a7ef;
+
+        &:hover {
+          color: #9db9f2;
+        }
+      }
+    }
+  }
+}
+
 /* SCSS related to the list of metrics in Kubernetes */
 main {
 
