@@ -7,8 +7,13 @@
 
   background: transparent !important;
   position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 1030;
   transition: 0.3s;
   width: 100%;
+  border-bottom: 0 !important;
+  --td-navbar-border-bottom: 0;
 
   // Based on from Bootstrap's _navbar.scss
   .active > .nav-link,
@@ -22,7 +27,7 @@
 
   .navbar-brand {
     @include media-breakpoint-down(sm) {
-      margin-inline-start: auto;
+      margin-left: 0;
     }
 
     svg {
@@ -70,13 +75,38 @@
 /* Centers logo without offset horizontally and vertically in the navbar on small / mobile viewports */
 @include media-breakpoint-down(sm) {
   .navbar-brand__logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 20%;
-    z-index: 5;
+    position: static;
+    transform: none;
   }
 }
+}
+
+.td-navbar .td-navbar-nav-scroll--indicator .scroll-indicator {
+  color: $navbar-dark-color;
+}
+
+.td-navbar .td-navbar-nav-scroll--indicator {
+  .scroll-indicator.scroll-left::before,
+  .scroll-indicator.scroll-right::before {
+    color: currentColor;
+  }
+}
+
+body.td-home .td-navbar:not(.navbar-bg-onscroll) {
+  .navbar-nav .nav-link,
+  #hamburger,
+  .btn-link.nav-link,
+  .dropdown-toggle {
+    color: $navbar-dark-color;
+
+    &:hover:focus {
+      color: $navbar-dark-hover-color;
+    }
+  }
+
+  .scroll-indicator {
+    color: $navbar-dark-color;
+  }
 }
 
 .navbar-bg-onscroll {
@@ -89,6 +119,10 @@
     &:hover, &:focus {
       color: $primary;
     }
+  }
+
+  .scroll-indicator {
+    color: $dark-grey;
   }
 
   .navbar-nav {
