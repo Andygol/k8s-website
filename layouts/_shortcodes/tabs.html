@@ -9,25 +9,13 @@
 {{- $persistKey := "" -}}
 <ul class="nav nav-tabs" id="tabs-{{- $tabPaneOrdinal -}}" role="tablist">
 	{{- range $i, $e := $tabs -}}
-      {{- $enabled := not $e.disabled -}}
-	  {{- $id := printf "%s-%d" $tabPaneOrdinal $i -}}
-      {{- $entryid := printf "tabs-%02v-%v" $tabPaneOrdinal $i | anchorize -}}
-      {{- $tabid := printf "tabs-%02v-%v-tab" $tabPaneOrdinal $i | anchorize -}}
-      {{- $isActiveTab = (eq $i 0) -}}
-      <li class="nav-item">
-      <button class="nav-link
-        {{- if $isActiveTab -}}
-          {{ $activeWasSet = true }} active
-        {{- end -}}
-        {{ if not $enabled }} disabled{{ end -}}"
-          id="{{ $tabid }}" data-bs-toggle="tab" data-bs-target="#{{ $entryid }}" role="tab"
-          {{ if $persistTab -}}
-            {{ printf "%s=%q " $tpPersistAttrName $persistKey | safeHTMLAttr -}}
-          {{ end -}}
-          aria-controls="{{- $entryid -}}" aria-selected="{{ $isActiveTab }}">
-        {{ index . "name" | markdownify }}
-      </button>
-	{{- end -}}
+	  {{- $id := printf "%s-%d" $tab_set_id $i -}}
+	  {{- if (eq $i 0) -}}
+		<li class="nav-item"><a data-bs-toggle="tab" class="nav-link active" href="#{{ $id }}" role="tab" aria-controls="{{ $id }}" aria-selected="true">{{- trim .name " " -}}</a></li>
+	  {{ else }}
+		<li class="nav-item"><a data-bs-toggle="tab" class="nav-link" href="#{{ $id }}" role="tab" aria-controls="{{ $id }}">{{- trim .name " " -}}</a></li>
+	  {{- end -}}
+{{- end -}}
 </ul>
 
 <div class="tab-content" id="tabs-{{ $tabPaneOrdinal }}-content">
