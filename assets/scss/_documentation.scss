@@ -85,12 +85,12 @@ div.api-reference-header-note {
 
   font-size: 1.1em;
 
-  details > summary, details[open] > summary { 
+  details > summary, details[open] > summary {
     color: $black;
     font-size: 1rem;
     margin: 0;
   }
-  
+
   ul {
     list-style-type: none;
     > li {
