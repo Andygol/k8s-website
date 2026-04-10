@@ -50,6 +50,25 @@ body {
     min-height: 50vh;
     height: auto;
   }
+
+  // Keep main content below the fixed navbar on templates that do not render a hero section.
+  header:not(:has(.header-hero)) + .td-outer {
+    padding-top: 4rem;
+
+    @media only screen and (max-width: 992px) {
+      padding-top: 5rem;
+    }
+  }
+}
+
+// Docsy adds a second navbar-sized top margin to sticky sidebars.
+// Keep only sticky top offset so sidebars start under the navbar immediately.
+@supports (position: sticky) {
+  .td-sidebar,
+  .td-sidebar-toc,
+  .td-no-left-sidebar .td-main .td-sidebar-toc {
+    margin-top: 0;
+  }
 }
 
 /* Complex table layout support */
@@ -1487,8 +1506,28 @@ body.td-home .header-hero {
   padding-top: 112px;
 }
 
+body.cid-training .header-hero {
+  padding-top: 112px;
+}
+
+body.cid-careers .header-hero,
+body.cid-partners .header-hero,
+body.cid-community .header-hero {
+  padding-top: 112px;
+}
+
 @media (max-width: 992px) {
   body.td-home .header-hero {
+    padding-top: 96px;
+  }
+
+  body.cid-training .header-hero {
+    padding-top: 96px;
+  }
+
+  body.cid-careers .header-hero,
+  body.cid-partners .header-hero,
+  body.cid-community .header-hero {
     padding-top: 96px;
   }
 }
@@ -2381,6 +2420,15 @@ section.k8s-birthday-override:has(div.k8s-birthday-override.revert-to-previous i
  * Dark mode styles for Community page
  * ============================================ */
 [data-bs-theme="dark"] body.cid-community {
+  // Match top hero section color with training page dark theme.
+  .td-main > section.td-box--primary.td-below-navbar {
+    background-color: #1a4375 !important;
+
+    .td-arrow-down::before {
+      border-color: #1a4375 transparent transparent transparent;
+    }
+  }
+
   // Navigation items
   #navigation-items {
     background-color: #161b22 !important;

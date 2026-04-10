@@ -81,6 +81,12 @@
 }
 }
 
+// Keep a bottom border for docs/blog section pages.
+body.td-section:not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-community) .td-navbar {
+  border-bottom: 1px solid var(--bs-border-color) !important;
+  --td-navbar-border-bottom: 1px solid var(--bs-border-color);
+}
+
 .td-navbar .td-navbar-nav-scroll--indicator .scroll-indicator {
   color: $navbar-dark-color;
 }
@@ -92,7 +98,11 @@
   }
 }
 
-body.td-home .td-navbar:not(.navbar-bg-onscroll) {
+body.td-home .td-navbar:not(.navbar-bg-onscroll),
+body.cid-training .td-navbar:not(.navbar-bg-onscroll),
+body.cid-careers .td-navbar:not(.navbar-bg-onscroll),
+body.cid-partners .td-navbar:not(.navbar-bg-onscroll),
+body.cid-community .td-navbar:not(.navbar-bg-onscroll) {
   .navbar-nav .nav-link,
   #hamburger,
   .btn-link.nav-link,
@@ -106,6 +116,25 @@ body.td-home .td-navbar:not(.navbar-bg-onscroll) {
 
   .scroll-indicator {
     color: $navbar-dark-color;
+  }
+}
+
+// Keep a white wordmark before scroll on hero-style top sections.
+body.td-home .td-navbar:not(.navbar-bg-onscroll),
+body.cid-training .td-navbar:not(.navbar-bg-onscroll),
+body.cid-careers .td-navbar:not(.navbar-bg-onscroll),
+body.cid-partners .td-navbar:not(.navbar-bg-onscroll),
+body.cid-community .td-navbar:not(.navbar-bg-onscroll) {
+  .navbar-brand__logo.navbar-logo svg #its-pronounced path {
+    fill: $white;
+  }
+}
+
+// Keep a blue wordmark before scroll on Documentation and Blog pages.
+body.td-blog .td-navbar:not(.navbar-bg-onscroll),
+body.td-section:not(.td-blog):not(.td-home):not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-community) .td-navbar:not(.navbar-bg-onscroll) {
+  .navbar-brand__logo.navbar-logo svg #its-pronounced path {
+    fill: $primary;
   }
 }
 
