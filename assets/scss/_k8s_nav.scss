@@ -93,6 +93,12 @@ body.td-page:not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-co
   --td-navbar-border-bottom: 1px solid var(--bs-border-color);
 }
 
+// Keep Search aligned with the Home-style transparent navbar before scroll.
+body.td-page:has(#search-results-search) .td-navbar {
+  border-bottom: 0 !important;
+  --td-navbar-border-bottom: 0;
+}
+
 .td-navbar .td-navbar-nav-scroll--indicator .scroll-indicator {
   color: $navbar-dark-color;
 }
@@ -105,6 +111,8 @@ body.td-page:not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-co
 }
 
 body.td-home .td-navbar:not(.navbar-bg-onscroll),
+body.td-404 .td-navbar:not(.navbar-bg-onscroll),
+body.td-page:has(#search-results-search) .td-navbar:not(.navbar-bg-onscroll),
 body.cid-training .td-navbar:not(.navbar-bg-onscroll),
 body.cid-careers .td-navbar:not(.navbar-bg-onscroll),
 body.cid-partners .td-navbar:not(.navbar-bg-onscroll),
@@ -127,6 +135,8 @@ body.cid-community .td-navbar:not(.navbar-bg-onscroll) {
 
 // Keep a white wordmark before scroll on hero-style top sections.
 body.td-home .td-navbar:not(.navbar-bg-onscroll),
+body.td-404 .td-navbar:not(.navbar-bg-onscroll),
+body.td-page:has(#search-results-search) .td-navbar:not(.navbar-bg-onscroll),
 body.cid-training .td-navbar:not(.navbar-bg-onscroll),
 body.cid-careers .td-navbar:not(.navbar-bg-onscroll),
 body.cid-partners .td-navbar:not(.navbar-bg-onscroll),
