@@ -2,7 +2,7 @@
 title: "fish স্বয়ংক্রিয় সমাপ্তি"
 description: "fish শেল স্বয়ংক্রিয় সমাপ্তি চালু করার জন্য ঐচ্ছিক কনফিগারেশন।"
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false

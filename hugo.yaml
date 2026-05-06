@@ -219,17 +219,17 @@ params:
 languages:
   en:
     title: "Kubernetes"
-    languageName: "English"
+    label: "English"
     weight: 1
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       description: "Production-Grade Container Orchestration"
   bn:
     title: "Kubernetes"
-    languageName: "বাংলা (Bengali)"
+    label: "বাংলা (Bengali)"
     weight: 2
     contentDir: "content/bn"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "02.01.2006"
       language_alternatives:
@@ -238,10 +238,10 @@ languages:
       languageNameLatinScript: "Bengali"
   zh-cn:
     title: "Kubernetes"
-    languageName: "中文 (Chinese)"
+    label: "中文 (Chinese)"
     weight: 3
     contentDir: "content/zh-cn"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "2006.01.02"
       language_alternatives:
@@ -250,10 +250,10 @@ languages:
       description: "生产级别的容器编排系统"
   fr:
     title: "Kubernetes"
-    languageName: "Français (French)"
+    label: "Français (French)"
     weight: 4
     contentDir: "content/fr"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "02.01.2006"
       language_alternatives:
@@ -262,10 +262,10 @@ languages:
       languageNameLatinScript: "Français"
   de:
     title: "Kubernetes"
-    languageName: "Deutsch (German)"
+    label: "Deutsch (German)"
     weight: 5
     contentDir: "content/de"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "02.01.2006"
       language_alternatives:
@@ -274,10 +274,10 @@ languages:
       languageNameLatinScript: "Deutsch"
   hi:
     title: "Kubernetes"
-    languageName: "हिन्दी (Hindi)"
+    label: "हिन्दी (Hindi)"
     weight: 6
     contentDir: "content/hi"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "02.01.2006"
       language_alternatives:
@@ -286,10 +286,10 @@ languages:
       languageNameLatinScript: "Hindi"
   id:
     title: "Kubernetes"
-    languageName: "Bahasa Indonesia (Indonesian)"
+    label: "Bahasa Indonesia (Indonesian)"
     weight: 7
     contentDir: "content/id"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "02.01.2006"
       language_alternatives:
@@ -298,10 +298,10 @@ languages:
       languageNameLatinScript: "Bahasa Indonesia"
   it:
     title: "Kubernetes"
-    languageName: "Italiano (Italian)"
+    label: "Italiano (Italian)"
     weight: 8
     contentDir: "content/it"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "02.01.2006"
       language_alternatives:
@@ -310,10 +310,10 @@ languages:
       languageNameLatinScript: "Italiano"
   ja:
     title: "Kubernetes"
-    languageName: "日本語 (Japanese)"
+    label: "日本語 (Japanese)"
     weight: 9
     contentDir: "content/ja"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "2006.01.02"
       language_alternatives:
@@ -322,10 +322,10 @@ languages:
       description: "プロダクショングレードのコンテナ管理基盤"
   ko:
     title: "Kubernetes"
-    languageName: "한국어 (Korean)"
+    label: "한국어 (Korean)"
     weight: 10
     contentDir: "content/ko"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "2006.01.02"
       language_alternatives:
@@ -349,7 +349,7 @@ languages:
     languageName: "Polski (Polish)"
     weight: 12
     contentDir: "content/pl"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "01.02.2006"
       language_alternatives:
@@ -361,7 +361,7 @@ languages:
     languageName: "Português (Portuguese)"
     weight: 13
     contentDir: "content/pt-br"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "02.01.2006"
       language_alternatives:
@@ -373,7 +373,7 @@ languages:
     languageName: "Русский (Russian)"
     weight: 14
     contentDir: "content/ru"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "02.01.2006"
       language_alternatives:
@@ -385,7 +385,7 @@ languages:
     languageName: "Español (Spanish)"
     weight: 15
     contentDir: "content/es"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "02.01.2006"
       language_alternatives:
@@ -397,7 +397,7 @@ languages:
     languageName: "Українська (Ukrainian)"
     weight: 16
     contentDir: "content/uk"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       time_format_blog: "02.01.2006"
       language_alternatives:
@@ -409,7 +409,7 @@ languages:
     languageName: "Tiếng Việt (Vietnamese)"
     weight: 17
     contentDir: "content/vi"
-    languageDirection: "ltr"
+    direction: "ltr"
     params:
       languageNameLatinScript: "Tiếng Việt"
       description: "Giải pháp điều phối container trong môi trường production"

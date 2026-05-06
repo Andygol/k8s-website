@@ -2,7 +2,7 @@
 # Removed from Kubernetes
 title: PodSecurity
 content_type: feature_gate
-_build:
+build:
   list: never
   render: false
 

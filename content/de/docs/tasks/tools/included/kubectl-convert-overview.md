@@ -5,7 +5,7 @@ description: >-
   der Kubernetes API zu einer anderen zu konvertieren.
 
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false

@@ -9,7 +9,7 @@
             </tr>
         </thead>
         <tbody>
-            {{ range $eolRelease := .Site.Data.releases.eol.branches }}
+            {{ range $eolRelease := hugo.Data.releases.eol.branches }}
             <tr>
                 <td>
                     <a href="/releases/{{ $eolRelease.release }}/">{{ $eolRelease.release }}</a>

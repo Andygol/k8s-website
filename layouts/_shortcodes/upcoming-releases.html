@@ -9,7 +9,7 @@
     </thead>
     <tbody>
       {{ range $patchReleaseInfo :=
-      .Site.Data.releases.schedule.upcoming_releases }}
+      hugo.Data.releases.schedule.upcoming_releases }}
       <tr>
         <td>
           {{- with $patchReleaseInfo.targetDate -}}

@@ -5,8 +5,8 @@
 */}}
 {{ .EnableAllLanguages }}
 
-{{ $eolData := site.Data.releases.eol }}
-{{ $supportedData := site.Data.releases.schedule }}
+{{ $eolData := hugo.Data.releases.eol }}
+{{ $supportedData := hugo.Data.releases.schedule }}
 
 {{ $now := now }}
 {{ $allReleases := dict }}

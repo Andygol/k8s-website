@@ -2,7 +2,7 @@
 title: "Linux 系统中的 Bash 自动补全功能"
 description: "Linux 系统中 Bash 自动补全功能的一些可选配置。"
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false
@@ -11,7 +11,7 @@ _build:
 title: "bash auto-completion on Linux"
 description: "Some optional configuration for bash auto-completion on Linux."
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false

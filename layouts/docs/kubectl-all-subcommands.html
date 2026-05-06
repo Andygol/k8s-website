@@ -30,7 +30,7 @@
 		</ul>
 		{{ end }}
 
-		<p class="kubectl-cmd-detail-link"><a href="{{ $section.RelPermalink }}">{{ T "kubectl_ref_view_full" }} {{ if eq (or .Site.Language.LanguageDirection "ltr") "rtl" }}&larr;{{ else }}&rarr;{{ end }}</a></p>
+		<p class="kubectl-cmd-detail-link"><a href="{{ $section.RelPermalink }}">{{ T "kubectl_ref_view_full" }} {{ if eq (or .Site.Language.Direction "ltr") "rtl" }}&larr;{{ else }}&rarr;{{ end }}</a></p>
 		</details>
 	{{ end }}
 	</div>

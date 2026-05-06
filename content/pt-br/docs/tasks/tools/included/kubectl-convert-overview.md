@@ -3,7 +3,7 @@ title: "Visão geral do kubectl-convert"
 description: >-
  Um plugin para o `kubectl` que permite converter manifestos entre diferentes versões da API.
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false

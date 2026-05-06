@@ -3,7 +3,7 @@
 title: IPv6DualStack
 content_type: feature_gate
 
-_build:
+build:
   list: never
   render: false
 

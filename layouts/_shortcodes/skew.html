@@ -80,7 +80,7 @@
 <!-- output patch version for current release -->
 {{- if eq $version "currentPatchVersion" -}}
     {{- $seenPatchVersionInfoCount := 0 }}
-    {{- range $releaseInfo := .Site.Data.releases.schedule.schedules -}}
+    {{- range $releaseInfo := hugo.Data.releases.schedule.schedules -}}
         {{- if eq $currentVersion ( printf "%.2f" $releaseInfo.release ) -}}
             {{- range $patchReleaseInfo := $releaseInfo.previousPatches -}}
                 {{- if eq $seenPatchVersionInfoCount 0 -}}
