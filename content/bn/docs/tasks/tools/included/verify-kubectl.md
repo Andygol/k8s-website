@@ -2,7 +2,7 @@
 title: "kubectl ইনস্টল যাচাই করুন"
 description: "কিভাবে kubectl যাচাই করবেন।"
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false

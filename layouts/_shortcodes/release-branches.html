@@ -1,4 +1,4 @@
-{{ range $releaseInfo := .Site.Data.releases.schedule.schedules }}
+{{ range $releaseInfo := hugo.Data.releases.schedule.schedules }}
 {{- $version := printf "%s" $releaseInfo.release -}}
 {{- $dataIdVersion := replace ( printf "%s" $releaseInfo.release ) "." "-" | anchorize -}}
 

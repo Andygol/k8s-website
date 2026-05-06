@@ -2,7 +2,7 @@
 title: "后续内容"
 description: "安装 kubectl 之后，还可以做些什么？"
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false

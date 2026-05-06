@@ -2,7 +2,7 @@
 title: "xác minh cài đặt lệnh kubectl"
 description: "Cách kiểm tra lệnh kubectl đã được cài thành công"
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false

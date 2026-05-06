@@ -1,4 +1,4 @@
----  
+---
 layout: blog
 title: "Kubernetes v1.36: ハル (Haru)"
 date: 2026-04-22
@@ -505,21 +505,21 @@ This work was done as part of [KEP #5825](https://kep.k8s.io/5825) led by SIG No
 
 ### Ingress NGINX retirement
 
-To prioritize the safety and security of the ecosystem, Kubernetes SIG Network and the Security Response Committee have 
+To prioritize the safety and security of the ecosystem, Kubernetes SIG Network and the Security Response Committee have
 retired Ingress NGINX on March 24, 2026.
 Since that date, there have been no further releases, no bugfixes, and no updates to resolve any security vulnerabilities discovered. Existing deployments of
-Ingress NGINX will continue to function, and installation artifacts like Helm charts and container images will remain available. 
+Ingress NGINX will continue to function, and installation artifacts like Helm charts and container images will remain available.
 
 For full details, see the [official retirement announcement](/blog/2025/11/11/ingress-nginx-retirement/).
 
 ### Faster SELinux labelling for volumes (GA) {#volume-selinux-labelling}
 
-Kubernetes v1.36 makes the SELinux volume mounting improvement generally available. This change replaced recursive file 
-relabeling with `mount -o context=XYZ` option, applying the correct SELinux label to the entire volume at mount time. 
+Kubernetes v1.36 makes the SELinux volume mounting improvement generally available. This change replaced recursive file
+relabeling with `mount -o context=XYZ` option, applying the correct SELinux label to the entire volume at mount time.
 It brings more consistent performance and reduces Pod startup delays on SELinux-enforcing systems.
 
-This feature was introduced as beta in v1.28 for `ReadWriteOncePod` volumes. In v1.32, it gained metrics and an opt-out 
-option (`securityContext.seLinuxChangePolicy: Recursive`) to help catch conflicts. Now in v1.36, 
+This feature was introduced as beta in v1.28 for `ReadWriteOncePod` volumes. In v1.32, it gained metrics and an opt-out
+option (`securityContext.seLinuxChangePolicy: Recursive`) to help catch conflicts. Now in v1.36,
 it reaches Stable and defaults to all volumes, with Pods or CSIDrivers opting in via `spec.seLinuxMount`.
 
 However, we expect this feature to create the risk of breaking changes in the future Kubernetes releases, potentially due to sharing one volume between privileged and unprivileged Pods on the same node.
@@ -599,33 +599,33 @@ Check out the full details of the Kubernetes v1.36 release in our [release notes
 
 Kubernetes v1.36 is available for download on [GitHub](https://github.com/kubernetes/kubernetes/releases/tag/v1.36.0) or on the [Kubernetes download page](https://kubernetes.io/releases/download/).
 
-To get started with Kubernetes, check out [these tutorials](https://kubernetes.io/docs/tutorials/) or run local Kubernetes clusters using [minikube](https://minikube.sigs.k8s.io/). 
+To get started with Kubernetes, check out [these tutorials](https://kubernetes.io/docs/tutorials/) or run local Kubernetes clusters using [minikube](https://minikube.sigs.k8s.io/).
 You can also easily [install v1.36 using kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/).
 
 ## Release Team
 
-Kubernetes is only possible with the support, commitment, and hard work of its community. Each release team is 
-made up of dedicated community volunteers who work together to build the many pieces that make up the 
-Kubernetes releases you rely on. This requires the specialized skills of people from all corners of our community, 
+Kubernetes is only possible with the support, commitment, and hard work of its community. Each release team is
+made up of dedicated community volunteers who work together to build the many pieces that make up the
+Kubernetes releases you rely on. This requires the specialized skills of people from all corners of our community,
 from the code itself to its documentation and project management.
 
-We would like to thank the entire [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.36/release-team.md) for the hours spent hard at work to deliver the Kubernetes v1.36 release to our community. 
-The Release Team's membership ranges from first-time shadows to returning team leads with experience forged over 
-several release cycles. A very special thanks goes out to our release lead, Ryota Sawada, 
-for guiding us through a successful release cycle, for his hands-on approach to solving challenges, 
+We would like to thank the entire [Release Team](https://github.com/kubernetes/sig-release/blob/master/releases/release-1.36/release-team.md) for the hours spent hard at work to deliver the Kubernetes v1.36 release to our community.
+The Release Team's membership ranges from first-time shadows to returning team leads with experience forged over
+several release cycles. A very special thanks goes out to our release lead, Ryota Sawada,
+for guiding us through a successful release cycle, for his hands-on approach to solving challenges,
 and for bringing the energy and care that drives our community forward.
 
 ## Project Velocity
 
-The CNCF K8s [DevStats](https://k8s.devstats.cncf.io/d/11/companies-contributing-in-repository-groups?orgId=1&var-period=m&var-repogroup_name=All) project aggregates a number of interesting data points related to the velocity of 
-Kubernetes and various sub-projects. This includes everything from individual contributions to the number of 
+The CNCF K8s [DevStats](https://k8s.devstats.cncf.io/d/11/companies-contributing-in-repository-groups?orgId=1&var-period=m&var-repogroup_name=All) project aggregates a number of interesting data points related to the velocity of
+Kubernetes and various sub-projects. This includes everything from individual contributions to the number of
 companies that are contributing, and is an illustration of the depth and breadth of effort that goes into evolving this ecosystem.
 
-During the v1.36 release cycle, which spanned 15 weeks from 12th January 2026 to 22nd April 2026, 
-Kubernetes received contributions from as many as 106 different companies and 491 individuals. 
+During the v1.36 release cycle, which spanned 15 weeks from 12th January 2026 to 22nd April 2026,
+Kubernetes received contributions from as many as 106 different companies and 491 individuals.
 In the wider cloud native ecosystem, the figure goes up to 370 companies, counting 2235 total contributors.
 
-Note that “contribution” counts when someone makes a commit, code review, comment, creates an issue or PR, 
+Note that “contribution” counts when someone makes a commit, code review, comment, creates an issue or PR,
 reviews a PR (including blogs and documentation) or comments on issues and PRs.
 If you are interested in contributing, visit [Getting Started](https://www.kubernetes.dev/docs/guide/#getting-started) on our contributor website.
 
@@ -636,7 +636,7 @@ Source for this data:
 
 ## Events Update
 
-Explore upcoming Kubernetes and cloud native events, including KubeCon + CloudNativeCon, KCD, 
+Explore upcoming Kubernetes and cloud native events, including KubeCon + CloudNativeCon, KCD,
 and other notable conferences worldwide. Stay informed and get involved with the Kubernetes community!
 
 **April 2026**
@@ -648,7 +648,7 @@ and other notable conferences worldwide. Stay informed and get involved with the
 - KCD - [Kubernetes Community Days: Istanbul](https://community.cncf.io/events/details/cncf-kcd-istanbul-presents-kcd-istanbul-2026/): May 15, 2026 | Istanbul, Turkey
 - KCD - [Kubernetes Community Days: Helsinki](https://community.cncf.io/events/details/cncf-kcd-helsinki-presents-kubernetes-community-days-helsinki-2026/): May 20, 2026 | Helsinki, Finland
 - KCD - [Kubernetes Community Days: Czech & Slovak](https://community.cncf.io/events/details/cncf-kcd-czech-slovak-presents-kcd-czech-amp-slovak-prague-2026/): May 21, 2026 | Prague, Czechia
- 
+
 **June 2026**
 - KCD - [Kubernetes Community Days: New York](https://community.cncf.io/events/details/cncf-kcd-new-york-presents-kcd-new-york-2026/): June 10, 2026 | New York, USA
 - KCD - [Kubernetes Community Days: Kuala Lumpur](https://community2.cncf.io/events/details/cncf-kcd-kuala-lumpur-2026-presents-kcd-kuala-lumpur-2026/): June 27, 2026 | Kuala Lumpur, Malaysia
@@ -678,8 +678,8 @@ of this release. For more information and registration, visit the [event page](h
 
 ## Get Involved
 
-The simplest way to get involved with Kubernetes is by joining one of the many [Special Interest Groups](https://github.com/kubernetes/community/blob/master/sig-list.md) (SIGs) that align with your interests. 
-Have something you’d like to broadcast to the Kubernetes community? Share your voice at our weekly [community meeting](https://github.com/kubernetes/community/tree/master/communication), 
+The simplest way to get involved with Kubernetes is by joining one of the many [Special Interest Groups](https://github.com/kubernetes/community/blob/master/sig-list.md) (SIGs) that align with your interests.
+Have something you’d like to broadcast to the Kubernetes community? Share your voice at our weekly [community meeting](https://github.com/kubernetes/community/tree/master/communication),
 and through the channels below. Thank you for your continued feedback and support.
 
 - Follow us on Bluesky [@kubernetes.io](https://bsky.app/profile/kubernetes.io) for the latest updates

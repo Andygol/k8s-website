@@ -2,7 +2,7 @@
 title: "macOS 系统上的 bash 自动补全"
 description: "在 macOS 上实现 Bash 自动补全的一些可选配置。"
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false
@@ -11,7 +11,7 @@ _build:
 title: "bash auto-completion on macOS"
 description: "Some optional configuration for bash auto-completion on macOS."
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false

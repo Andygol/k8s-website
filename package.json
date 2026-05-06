@@ -7,11 +7,11 @@
     "serve:netlify": "netlify dev --targetPort 1313"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "docsy": "github:google/docsy#v0.14.3",
-    "hugo-extended": "^0.159.0",
-    "netlify-cli": "^23.15.1",
-    "postcss-cli": "^11.0.0"
+    "autoprefixer": "^10.5.0",
+    "docsy": "github:google/docsy#v0.15.0",
+    "hugo-extended": "^0.161.1",
+    "netlify-cli": "^26.0.1",
+    "postcss-cli": "^11.0.1"
   },
   "spelling": "cSpell:ignore docsy pkgs -"
 }

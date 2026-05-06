@@ -14,7 +14,7 @@
 {{ $.Scratch.Set "content" . }}
 {{ else }}
 {{/* If not found, try the default language */}}
-{{ $defaultLang := (index (sort site.Languages "Weight") 0).Lang }}
+{{ $defaultLang := (index (sort hugo.Sites "Language.Weight") 0).Language.Lang }}
 {{ with readFile (printf "/content/%s/examples/%s" $defaultLang $file) }}
 {{ $.Scratch.Set "content" . }}
 {{ $.Scratch.Set "filename" (printf "/content/%s/examples/%s" $defaultLang $file) }}

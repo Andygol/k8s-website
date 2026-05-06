@@ -8,12 +8,12 @@
 <div id="tag-container">
 	<p><em>{{ T "layouts_docs_glossary_filter" }}</em></p>
 	<div class="tag-description invisible" id="placeholder">.</div>
-	{{ range (index site.Data "canonical-tags") }}
+	{{ range (index hugo.Data "canonical-tags") }}
 	<div class="tag-description hide" id="{{ printf "tag-%s-description" .id  }}">
 		{{ T (printf "layout_docs_glossary_%s_description" .id) }}
 	</div>
 	{{ end }}
-	{{ $sorted_tags := sort (index site.Data "canonical-tags") "id" }}
+	{{ $sorted_tags := sort (index hugo.Data "canonical-tags") "id" }}
 	{{ range $sorted_tags }}
 	{{ $full_tag_name := printf "tag-%s" .id }}
 	<span id="{{ $full_tag_name  }}" class="tag-option canonical-tag" data-target="{{ $full_tag_name  }}">

@@ -4,7 +4,7 @@ description: >-
   A kubectl plugin that allows you to convert manifests from one version
   of a Kubernetes API to a different version.
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false

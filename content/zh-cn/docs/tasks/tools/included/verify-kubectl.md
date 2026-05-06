@@ -2,7 +2,7 @@
 title: "验证 kubectl 的安装效果"
 description: "如何验证 kubectl。"
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false
@@ -11,7 +11,7 @@ _build:
 title: "verify kubectl install"
 description: "How to verify kubectl."
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false

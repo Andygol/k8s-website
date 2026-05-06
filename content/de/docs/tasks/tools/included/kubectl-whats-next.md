@@ -2,7 +2,7 @@
 title: "Wie geht es weiter?"
 description: "Wie geht es nach der Installation von Kubectl weiter."
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false

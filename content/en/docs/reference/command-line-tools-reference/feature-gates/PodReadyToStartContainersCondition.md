@@ -3,7 +3,7 @@ title: PodReadyToStartContainersCondition
 former_titles:
   - PodHasNetworkCondition
 content_type: feature_gate
-_build:
+build:
   list: never
   render: false
 

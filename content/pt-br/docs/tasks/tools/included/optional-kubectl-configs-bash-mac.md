@@ -2,7 +2,7 @@
 title: "Autocompletar do bash no macOS"
 description: "Configurações opcionais para habilitar o autocompletar do bash no macOS."
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false
