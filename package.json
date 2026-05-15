@@ -4,14 +4,16 @@
   "scripts": {
     "update:pkgs": "npx npm-check-updates -u",
     "serve": "hugo server --buildDrafts --buildFuture --environment development",
-    "serve:netlify": "netlify dev --targetPort 1313"
+    "serve:netlify": "netlify dev --targetPort 1313",
+    "postinstall": "node scripts/ensure-docsy-hugo-mod.js"
   },
   "devDependencies": {
     "autoprefixer": "^10.5.0",
     "docsy": "github:google/docsy#v0.15.0",
     "hugo-extended": "^0.161.1",
     "netlify-cli": "^26.0.1",
-    "postcss-cli": "^11.0.1"
+    "postcss-cli": "^11.0.1",
+    "rtlcss": "^4.3.0"
   },
   "spelling": "cSpell:ignore docsy pkgs -"
 }
