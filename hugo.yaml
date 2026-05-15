@@ -334,10 +334,10 @@ languages:
       languageNameLatinScript: "Korean"
   fa:
     title: "Kubernetes"
-    languageName: "فارسی (Persian)"
+    label: "فارسی (Persian)"
     weight: 11
     contentDir: "content/fa"
-    languageDirection: "rtl"
+    direction: "rtl"
     params:
       time_format_blog: "2006.01.02"
       language_alternatives:
@@ -346,7 +346,7 @@ languages:
       languageNameLatinScript: "Persian"
   pl:
     title: "Kubernetes"
-    languageName: "Polski (Polish)"
+    label: "Polski (Polish)"
     weight: 12
     contentDir: "content/pl"
     direction: "ltr"
@@ -358,7 +358,7 @@ languages:
       languageNameLatinScript: "Polski"
   pt-br:
     title: "Kubernetes"
-    languageName: "Português (Portuguese)"
+    label: "Português (Portuguese)"
     weight: 13
     contentDir: "content/pt-br"
     direction: "ltr"
@@ -370,7 +370,7 @@ languages:
       languageNameLatinScript: "Português"
   ru:
     title: "Kubernetes"
-    languageName: "Русский (Russian)"
+    label: "Русский (Russian)"
     weight: 14
     contentDir: "content/ru"
     direction: "ltr"
@@ -382,7 +382,7 @@ languages:
       languageNameLatinScript: "Russian"
   es:
     title: "Kubernetes"
-    languageName: "Español (Spanish)"
+    label: "Español (Spanish)"
     weight: 15
     contentDir: "content/es"
     direction: "ltr"
@@ -394,7 +394,7 @@ languages:
       languageNameLatinScript: "Español"
   uk:
     title: "Kubernetes"
-    languageName: "Українська (Ukrainian)"
+    label: "Українська (Ukrainian)"
     weight: 16
     contentDir: "content/uk"
     direction: "ltr"
@@ -404,9 +404,10 @@ languages:
         - en
       description: "Довершена система оркестрування контейнерів"
       languageNameLatinScript: "Ukrainian"
+      version_menu: "Версії"
   vi:
     title: "Kubernetes"
-    languageName: "Tiếng Việt (Vietnamese)"
+    label: "Tiếng Việt (Vietnamese)"
     weight: 17
     contentDir: "content/vi"
     direction: "ltr"
