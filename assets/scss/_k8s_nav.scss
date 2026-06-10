@@ -82,13 +82,13 @@
 }
 
 // Keep a bottom border for docs/blog section pages.
-body.td-section:not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-community) .td-navbar {
+body.td-section:not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-community):not(:has(header .header-hero)) .td-navbar {
   border-bottom: 1px solid var(--bs-border-color) !important;
   --td-navbar-border-bottom: 1px solid var(--bs-border-color);
 }
 
 // Nested docs pages use td-page instead of td-section.
-body.td-page:not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-community) .td-navbar {
+body.td-page:not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-community):not(:has(header .header-hero)) .td-navbar {
   border-bottom: 1px solid var(--bs-border-color) !important;
   --td-navbar-border-bottom: 1px solid var(--bs-border-color);
 }
@@ -147,16 +147,59 @@ body.cid-community .td-navbar:not(.navbar-bg-onscroll) {
 }
 
 // Keep a blue wordmark before scroll on Documentation and Blog pages.
-body.td-blog .td-navbar:not(.navbar-bg-onscroll),
-body.td-section:not(.td-blog):not(.td-home):not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-community) .td-navbar:not(.navbar-bg-onscroll) {
+body.td-blog:not(:has(header .header-hero)) .td-navbar:not(.navbar-bg-onscroll),
+body.td-section:not(.td-blog):not(.td-home):not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-community):not(:has(header .header-hero)) .td-navbar:not(.navbar-bg-onscroll) {
   .navbar-brand__logo.navbar-logo svg #its-pronounced path {
     fill: $primary;
+  }
+}
+
+// On docs/blog sub-pages without a hero, keep nav items readable before scroll.
+body.td-blog:not(:has(header .header-hero)) .td-navbar:not(.navbar-bg-onscroll),
+body.td-section:not(.td-blog):not(.td-home):not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-community):not(:has(header .header-hero)) .td-navbar:not(.navbar-bg-onscroll),
+body.td-page:not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-community):not(:has(header .header-hero)) .td-navbar:not(.navbar-bg-onscroll) {
+  .navbar-nav .nav-link,
+  #hamburger,
+  .btn-link.nav-link,
+  .dropdown-toggle {
+    color: var(--bs-body-color);
+
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
+
+  .scroll-indicator {
+    color: $dark-grey;
+  }
+}
+
+// Keep search input hint legible over dark hero headers before scroll.
+body:has(header .header-hero) .td-navbar:not(.navbar-bg-onscroll) {
+  .td-search {
+    &:not(:focus-within) {
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+
+  .td-search .td-search__input {
+    color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 0.35);
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.75);
+    }
   }
 }
 
 .navbar-bg-onscroll {
   background: var(--bs-body-bg) !important;
   box-shadow: 0 1px 2px var(--bs-border-color);
+
+  .td-search .td-search__input {
+    border-color: var(--bs-border-color) !important;
+  }
 
   .navbar-nav .nav-link, #hamburger {
     color: var(--bs-body-color);

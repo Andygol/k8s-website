@@ -1543,6 +1543,11 @@ body.cid-community .header-hero {
   padding-top: 112px;
 }
 
+body.td-section:has(header .header-hero) .header-hero,
+body.td-blog:has(header .header-hero) .header-hero {
+  padding-top: 112px;
+}
+
 @media (max-width: 992px) {
   body.td-home .header-hero {
     padding-top: 96px;
@@ -1555,6 +1560,11 @@ body.cid-community .header-hero {
   body.cid-careers .header-hero,
   body.cid-partners .header-hero,
   body.cid-community .header-hero {
+    padding-top: 96px;
+  }
+
+  body.td-section:has(header .header-hero) .header-hero,
+  body.td-blog:has(header .header-hero) .header-hero {
     padding-top: 96px;
   }
 }
@@ -1642,7 +1652,7 @@ html.no-js body div#announcement {
 }
 
 /* don't display the hero header for some pages when there is a banner active */
-#announcement + .header-hero.filler, .td-page.td-blog #announcement + .header-hero {
+#announcement + .header-hero.filler {
   display: none;
 }
 

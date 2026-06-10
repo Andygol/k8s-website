@@ -404,7 +404,6 @@ languages:
         - en
       description: "Довершена система оркестрування контейнерів"
       languageNameLatinScript: "Ukrainian"
-      version_menu: "Версії"
   vi:
     title: "Kubernetes"
     label: "Tiếng Việt (Vietnamese)"

@@ -12,6 +12,13 @@
     <header>
       {{ partial "navbar.html" . }}
       {{ partial "announcement.html" . }}
+      <section class="header-hero text-white pb-4 light-text bot-bar">
+        <div class="main-section">
+          <div id="headlineWrapper">
+            <h1>{{ .Title }}</h1>
+          </div>
+        </div>
+      </section>
     </header>
     <div class="container-fluid td-outer">
       <div class="td-main" {{- partialCached "td/scrollspy-attr.txt" . .Section | safeHTMLAttr }}>
