@@ -7,7 +7,6 @@ author: >
   [Lukas Metzner](https://github.com/lukasmetzner) (Hetzner)
 aliases:
   - /zh-cn/blog/2026/02/26/ccm-new-metric-route-sync-total
-  - /zh-cn/blog/2026/02/26/ccm-new-metric-route-sync-total/
 translator: >
   [Xin Li](https://github.com/my-git9) (DaoCloud)
 ---

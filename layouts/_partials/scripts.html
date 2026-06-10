@@ -19,7 +19,6 @@
 {{ $jsResources := slice }}
 {{ with $jsBs }}{{ $jsResources = $jsResources | append . }}{{ end }}
 {{ with $jsBase }}{{ $jsResources = $jsResources | append . }}{{ end }}
-{{ with $jsAnchor }}{{ $jsResources = $jsResources | append . }}{{ end }}
 {{ with $jsNav }}{{ $jsResources = $jsResources | append . }}{{ end }}
 {{ with $jsSearch }}{{ $jsResources = $jsResources | append . }}{{ end }}
 {{- if $darkMode.enable -}}

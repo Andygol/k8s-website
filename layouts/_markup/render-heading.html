@@ -1,1 +1,2 @@
-{{ template "_default/_markup/td-render-heading.html" . -}}
+{{- $id := .Anchor | default (anchorize .PlainText) -}}
+<h{{ .Level }} id="{{ $id }}">{{ .Text | safeHTML }}</h{{ .Level }}>
