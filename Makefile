@@ -28,7 +28,7 @@ CONTAINER_HUGO_MOUNTS = \
 	--mount type=bind,source=$(CURDIR)/layouts,target=/src/layouts,readonly \
 	--mount type=bind,source=$(CURDIR)/static,target=/src/static,readonly \
 	--mount type=tmpfs,destination=/tmp,tmpfs-mode=01777 \
-	--mount type=bind,source=$(CURDIR)/hugo.toml,target=/src/hugo.toml,readonly \
+	--mount type=bind,source=$(CURDIR)/hugo.yaml,target=/src/hugo.yaml,readonly \
 	--mount type=bind,source=$(CURDIR)/hugo.server.toml,target=/src/hugo.server.toml,readonly
 
 CCRED=\033[0;31m
@@ -75,7 +75,7 @@ non-production-build: module-check ## Build the non-production site, which adds 
 
 serve: module-check ## Boot the development server.
 
-	$(HUGO) --config hugo.toml,hugo.server.toml --buildDrafts --buildFuture --environment development --renderSegments $(segments)
+	$(HUGO) --config hugo.yaml,hugo.server.toml --buildDrafts --buildFuture --environment development --renderSegments $(segments)
 
 serve-netlify: module-check ## Boot the development server with Netlify CLI (includes redirects).
 	$(HUGO) --buildDrafts --buildFuture --environment development
@@ -128,7 +128,7 @@ container-build: module-check
 container-serve: module-check ## Boot the development server using container.
 	$(CONTAINER_RUN_TTY) --cap-drop=ALL --cap-add=AUDIT_WRITE $(CONTAINER_HUGO_MOUNTS) \
 		-p 1313:1313 $(CONTAINER_IMAGE) \
-		$(HUGO) server --config hugo.toml,hugo.server.toml --buildDrafts --buildFuture --environment development --bind 0.0.0.0 --destination /tmp/public --cleanDestinationDir --noBuildLock --renderSegments $(segments)
+		$(HUGO) server --config hugo.yaml,hugo.server.toml --buildDrafts --buildFuture --environment development --bind 0.0.0.0 --destination /tmp/public --cleanDestinationDir --noBuildLock --renderSegments $(segments)
 
 test-examples:
 	scripts/test_examples.sh install

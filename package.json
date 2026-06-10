@@ -3,11 +3,12 @@
   "private": true,
   "scripts": {
     "update:pkgs": "npx npm-check-updates -u",
-    "serve": "hugo server --buildDrafts --buildFuture --environment development",
+    "serve": "hugo server --config hugo.yaml,hugo.server.toml --buildDrafts --buildFuture --environment development",
     "serve:netlify": "netlify dev --targetPort 1313",
     "postinstall": "node scripts/ensure-docsy-hugo-mod.js"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
     "autoprefixer": "^10.5.0",
     "docsy": "github:google/docsy#v0.15.0",
     "hugo-extended": "^0.161.1",

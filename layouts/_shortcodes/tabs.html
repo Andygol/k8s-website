@@ -9,7 +9,7 @@
 {{- $persistKey := "" -}}
 <ul class="nav nav-tabs" id="tabs-{{- $tabPaneOrdinal -}}" role="tablist">
 	{{- range $i, $e := $tabs -}}
-	  {{- $id := printf "%s-%d" $tab_set_id $i -}}
+	  {{- $id := printf "tabs-%02v-%v" $tabPaneOrdinal $i | anchorize -}}
 	  {{- if (eq $i 0) -}}
 		<li class="nav-item"><a data-bs-toggle="tab" class="nav-link active" href="#{{ $id }}" role="tab" aria-controls="{{ $id }}" aria-selected="true">{{- trim .name " " -}}</a></li>
 	  {{ else }}
