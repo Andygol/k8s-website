@@ -2,6 +2,7 @@
 {{- $cssFilesFromConfig := site.Params.pushAssets.css -}}
 {{- $jsFilesFromConfig := site.Params.pushAssets.js -}}
 {{- $pages := site.RegularPages -}}
+/*
   Link: </images/favicon.png>; rel=preload; as=image
   {{- range $cssFilesFromConfig -}}
   {{- $cssUrl := printf "/css/%s.css" . }}
