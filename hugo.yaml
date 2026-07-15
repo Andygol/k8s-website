@@ -10,6 +10,9 @@ timeZone: "Etc/UTC"
 enableRobotsTXT: true
 disableBrowserError: true
 disableAliases: true
+security:
+  allowContent:
+    - '.*'
 disableKinds:
   - taxonomy
 ignoreFiles:
@@ -220,6 +223,7 @@ languages:
   en:
     title: "Kubernetes"
     label: "English"
+    locale: "en"
     weight: 1
     direction: "ltr"
     params:
