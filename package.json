@@ -11,8 +11,9 @@
     "@fortawesome/fontawesome-free": "^6.5.1",
     "autoprefixer": "^10.5.0",
     "docsy": "github:google/docsy#v0.15.0",
-    "hugo-extended": "^0.161.1",
+    "hugo-extended": "^0.164.0",
     "netlify-cli": "^26.0.1",
+    "postcss": "^8.5.19",
     "postcss-cli": "^11.0.1",
     "rtlcss": "^4.3.0"
   },
