@@ -4,7 +4,7 @@ description: >-
   Một plugin của kubectl cho phép chuyển đổi các manifest từ một phiên bản
   của Kubernetes API sang một phiên bản khác.
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false

@@ -133,13 +133,13 @@ HorizontalPodAutoscaler 컨트롤러는 스케일링을 지원하는 상응하�
 
 ```math
 \begin{equation*}
-원하는레플리카수 = ceil\left\lceil 현재레플리카수 \times \frac{현재메트릭값}{원하는메트릭값} \right\rceil
+\text{원하는레플리카수} = ceil\left\lceil \text{현재레플리카수} \times \frac{\text{현재메트릭값}}{\text{원하는메트릭값}} \right\rceil
 \end{equation*}
 ```
 
 예를 들어, 현재 메트릭 값이 `200m`이고 원하는 값이
 `100m`이면, \\( { 200.0 \div 100.0 } = 2.0 \\) 이므로
-레플리카 수가 두 배가 된다.  
+레플리카 수가 두 배가 된다.
 반대로 현재 값이 `50m`이면, \\( { 50.0 \div 100.0 } = 0.5 \\) 이므로
 레플리카 수가 절반으로 줄어든다. 컨트롤 플레인은 비율이 1.0에
 충분히 가까우면([구성 가능한 허용 오차](#tolerance) 내, 기본값 0.1)
