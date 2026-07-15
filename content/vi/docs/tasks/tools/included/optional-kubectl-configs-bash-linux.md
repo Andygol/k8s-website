@@ -2,7 +2,7 @@
 title: "Tự động hoàn thành lệnh bash trên Linux"
 description: "Một vài cấu hình tuỳ chọn cho tự động hoàn thành lệnh bash trên Linux"
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false
@@ -11,7 +11,7 @@ _build:
 ### Giới thiệu
 
 Có thể tạo script tự động hoàn thành lệnh kubectl cho Bash bằng lệnh `kubectl completion bash`.
-Khi nạp script này vào shell sẽ có thể sử dụng tính năng tự động hoàn thành lệnh kubectl. 
+Khi nạp script này vào shell sẽ có thể sử dụng tính năng tự động hoàn thành lệnh kubectl.
 
 Tuy nhiên, script này phụ thuộc vào
 [**bash-completion**](https://github.com/scop/bash-completion),
@@ -54,7 +54,7 @@ sudo chmod a+r /etc/bash_completion.d/kubectl
 {{< /tab >}}
 {{< /tabs >}}
 
-Nếu bạn đặt alias cho kubectl, bạn có thể mở rộng tính năng tự động hoàn thành để sử dụng cùng alias đó: 
+Nếu bạn đặt alias cho kubectl, bạn có thể mở rộng tính năng tự động hoàn thành để sử dụng cùng alias đó:
 
 ```bash
 echo 'alias k=kubectl' >>~/.bashrc

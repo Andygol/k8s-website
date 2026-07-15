@@ -2,7 +2,7 @@
 title: "Tự động hoàn thành lệnh bash trên macOS"
 description: "Một vài cấu hình tuỳ chọn cho tự động hoàn thành lệnh bash trên macOS."
 headless: true
-_build:
+build:
   list: never
   render: never
   publishResources: false
@@ -20,8 +20,8 @@ Tuy nhiên, script này phụ thuộc vào
 Có hai phiên bản bash-completion, v1 và v2. V1 dành cho Bash 3.2
 (phiên bản mặc định trên macOS), còn v2 dành cho Bash 4.1+. Script tự động hoàn thành
 của kubectl **không hoạt động** đúng cách với bash-completion v1 và Bash 3.2.
-Nó yêu cầu **bash-completion v2** và **Bash 4.1+**. Do đó, để sử dụng 
-được tính năng tự động hoàn thành của kubectl trên macOS, bạn cần cài đặt và sử dụng  
+Nó yêu cầu **bash-completion v2** và **Bash 4.1+**. Do đó, để sử dụng
+được tính năng tự động hoàn thành của kubectl trên macOS, bạn cần cài đặt và sử dụng
 Bash 4.1+ ([*hướng dẫn*](https://apple.stackexchange.com/a/292760)).
 Các hướng dẫn dưới đây ngầm hiểu rằng bạn đang sử dụng Bash 4.1+
 (tức là Bash phiên bản 4.1 trở lên).
@@ -35,7 +35,7 @@ Các hướng dẫn dưới đây ngầm hiểu rằng bạn đang sử dụng B
 echo $BASH_VERSION
 ```
 
-Nếu đang sử dụng phiên bản quá cũ, bạn có thể cài đặt/nâng cấp nó sử dụng Homebrew: 
+Nếu đang sử dụng phiên bản quá cũ, bạn có thể cài đặt/nâng cấp nó sử dụng Homebrew:
 
 ```bash
 brew install bash
@@ -102,7 +102,7 @@ Có thể làm được điều này bằng nhiều cách:
   Trong trường hợp này, bạn không cần thực hiện thêm gì cả.
 
    {{< note >}}
-   Bản cài đặt bash-completion v2 bằng Homebrew sẽ nạp tất cả các file nằm trong 
+   Bản cài đặt bash-completion v2 bằng Homebrew sẽ nạp tất cả các file nằm trong
    thư mục `BASH_COMPLETION_COMPAT_DIR`, vậy nên hai cách cuối mới hoạt động.
    {{< /note >}}
 
