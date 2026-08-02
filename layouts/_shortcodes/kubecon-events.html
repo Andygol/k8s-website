@@ -1,4 +1,4 @@
-{{ $data := .Site.Data.events.kubecon }}
+{{ $data := hugo.Data.events.kubecon }}
 
 {{ range $data.events -}}
 {{ $startDate := time.AsTime .start_date -}}

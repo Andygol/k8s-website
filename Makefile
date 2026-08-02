@@ -74,8 +74,7 @@ non-production-build: module-check ## Build the non-production site, which adds 
 	$(HUGO) --cleanDestinationDir --enableGitInfo --environment nonprod
 
 serve: module-check ## Boot the development server.
-
-	$(HUGO) --config hugo.yaml,hugo.server.toml --buildDrafts --buildFuture --environment development --renderSegments $(segments)
+	$(HUGO) server --config hugo.yaml,hugo.server.toml --buildDrafts --buildFuture --environment development --renderSegments $(segments)
 
 serve-netlify: module-check ## Boot the development server with Netlify CLI (includes redirects).
 	$(HUGO) --buildDrafts --buildFuture --environment development
