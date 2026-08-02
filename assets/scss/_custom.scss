@@ -1818,6 +1818,12 @@ div.alert > em.javascript-required {
   height: 1.6em;
 }
 
+// Chroma 'native' dark style underlines the .nn token. In YAML, the `---`
+// document separator is tokenized as .nn, so it looks like a link.
+[data-bs-theme='dark'] .chroma code.language-yaml .nn {
+  text-decoration: none !important;
+}
+
 .content__box
 {
     margin: 0 0 20px;
