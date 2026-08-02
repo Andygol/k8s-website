@@ -1,7 +1,7 @@
 baseURL: "https://kubernetes.io"
 title: "Kubernetes"
 theme:
-  - docsy
+  - "@docsy/theme"
 themesDir: "node_modules"
 contentDir: "content/en"
 defaultContentLanguage: "en"
