@@ -8,9 +8,9 @@
     "postinstall": "node scripts/ensure-docsy-hugo-mod.js"
   },
   "devDependencies": {
+    "@docsy/theme": "^0.16.0",
     "@fortawesome/fontawesome-free": "^6.5.1",
     "autoprefixer": "^10.5.0",
-    "docsy": "github:google/docsy#v0.15.0",
     "hugo-extended": "^0.164.0",
     "netlify-cli": "^26.0.1",
     "postcss": "^8.5.19",
