@@ -1,2 +1,1 @@
-{{- $id := .Anchor | default (anchorize .PlainText) -}}
-<h{{ .Level }} id="{{ $id }}">{{ .Text | safeHTML }}</h{{ .Level }}>
+{{ partial "td/render-heading.html" . }}
