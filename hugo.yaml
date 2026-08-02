@@ -87,8 +87,10 @@ outputs:
     - REDIRECTS
   page:
     - HTML
+    - markdown
   section:
     - HTML
+    - markdown
     - print
 
 mediaTypes:
@@ -135,7 +137,8 @@ params:
   url_latest_version: "https://kubernetes.io/docs/home/"
   nextUrl: "https://kubernetes-io-vnext-staging.netlify.com/"
   githubWebsiteRaw: "raw.githubusercontent.com/kubernetes/website"
-  github_repo: "https://github.com/kubernetes/website"
+  github_repo: "https://github.com/Andygol/k8s-website"
+  github_branch: "main-uk-wip"
   customSearch: true
   search:
     algolia: false
