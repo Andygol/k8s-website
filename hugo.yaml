@@ -139,9 +139,6 @@ params:
   githubWebsiteRaw: "raw.githubusercontent.com/kubernetes/website"
   github_repo: "https://github.com/Andygol/k8s-website"
   github_branch: "main-uk-wip"
-  customSearch: true
-  search:
-    algolia: false
   offlineSearch: false
   cveFeedBucket: "https://storage.googleapis.com/k8s-cve-feed/official-cve-feed.json"
   pushAssets:
