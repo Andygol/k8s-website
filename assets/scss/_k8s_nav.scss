@@ -81,6 +81,50 @@
 }
 }
 
+[data-bs-theme="light"] .td-navbar {
+  background-color: var(--bs-body-bg) !important;
+
+  .navbar-nav .nav-link,
+  #hamburger,
+  .btn-link.nav-link,
+  .dropdown-toggle {
+    color: var(--bs-body-color);
+
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
+
+  .navbar-brand__logo.navbar-logo svg #its-pronounced path {
+    fill: $primary;
+  }
+}
+
+body:has(header .header-hero) .td-navbar {
+  background-color: transparent !important;
+
+  &.navbar-bg-onscroll {
+    background-color: #212529 !important;
+  }
+
+  .navbar-nav .nav-link,
+  #hamburger,
+  .btn-link.nav-link,
+  .dropdown-toggle {
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
+
+  .navbar-brand__logo.navbar-logo svg #its-pronounced path {
+    fill: $white;
+  }
+}
+
 // Keep a bottom border for docs/blog section pages.
 body.td-section:not(.cid-training):not(.cid-careers):not(.cid-partners):not(.cid-community):not(:has(header .header-hero)) .td-navbar {
   border-bottom: 1px solid var(--bs-border-color) !important;
